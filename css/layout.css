@@ -1,0 +1,12 @@
+/* Layout */
+
+.container {
+    height: 100vh;
+    /* Full viewport height */
+    width: 80vw;
+    /* 80% of the viewport width */
+    margin: 0 auto;
+    /* Centers the container horizontally */
+    background-color: lightgreen;
+    /* Light background for contrast */
+}
