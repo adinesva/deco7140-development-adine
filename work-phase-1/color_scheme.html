@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/component.css" />
+        <link rel="stylesheet" href="css/color_scheme" />
+
+        <title>Style Guide - Color Scheme</title>
+        <style>
+            .color-box {
+                width: 150px;
+                height: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-weight: bold;
+                border-radius: 12px;
+                margin: 10px;
+            }
+            .palette {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 16px;
+            }
+            .primary {
+                background: var(--color-primary);
+            }
+            .secondary {
+                background: var(--color-secondary);
+            }
+            .light {
+                background: var(--color-light);
+                color: black;
+            }
+            .dark {
+                background: var(--color-dark);
+                color: black;
+            }
+            .bright {
+                background: var(--color-bright);
+            }
+            .background {
+                background: var(--color-background);
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <header></header>
+        <div class="container">
+            <h1>Style Guide</h1>
+            <section>
+                <h2>Color Scheme</h2>
+                <p>This is the color scheme for this website.</p>
+            </section>
+            <section>
+                <div class="palette">
+                    <div class="color-box primary">Primary</div>
+                    <div class="color-box secondary">Secondary</div>
+                    <div class="color-box light">Light</div>
+                    <div class="color-box dark">Dark</div>
+                    <div class="color-box bright">Bright</div>
+                    <div class="color-box background">Background</div>
+                </div>
+            </section>
+            <section>
+                <h2>Links</h2>
+                <a href="./index.html">Work Phase 1 Home</a>
+            </section>
+        </div>
+        <!-- Linking External JavaScript -->
+        <script type="module" src="js/color_scheme.js"></script>
+    </body>
+</html>
