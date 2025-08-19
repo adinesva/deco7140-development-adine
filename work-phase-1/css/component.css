@@ -24,6 +24,7 @@
 
 .button-dark {
     background-color: var(--color-dark);
+
     color: white;
 }
 
