@@ -2,7 +2,7 @@
 
 .button {
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 1rem;
     border: none;
     cursor: pointer;
@@ -73,7 +73,7 @@
     right: 10px;
     background: var(--color-temperature);
     padding: 10px 15px;
-    border-radius: 5px;
+    border-radius: 12px;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
     font-size: 1rem;
     font-weight: bold;

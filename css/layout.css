@@ -1,4 +1,4 @@
-/* Layout */
+/* Default styles (Mobile First) */
 
 .container {
     height: 100vh;
@@ -7,6 +7,35 @@
     /* 80% of the viewport width */
     margin: 0 auto;
     /* Centers the container horizontally */
-    background-color: lightgreen;
-    /* Light background for contrast */
+}
+
+/* Default styles (Mobile First) */
+body {
+    font-size: 16px;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column; /* stack photo, icon, button vertically */
+    align-items: left;
+    gap: 12px; /* spacing between them */
+    margin: 20px;
+}
+
+/* Profile photo */
+.profile-photo {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%; /* circle */
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Larger screens, tablets or desktops */
+
+@media (min-width: 768px) {
+    .container {
+        width: 60vw;
+        /* 60% of the viewport width */
+    }
 }

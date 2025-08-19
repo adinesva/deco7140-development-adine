@@ -1,0 +1,31 @@
+/* =========================================
+   Color Variables
+   These variables make it easy to keep a 
+   consistent color scheme across the website.
+   Update the hex values here if the brand 
+   palette ever changes.
+========================================= */
+
+:root {
+    /* Brand colors */
+    --color-primary: #00809d; /* Highlights, Heading 1 */
+    --color-secondary: #154d71; /* Secondary highlight, Headings 4 & 5 */
+
+    /* Neutrals */
+    --color-light: #f0f0f0; /* Card backgrounds */
+    --color-dark: #01304C; /* Subdued elements */
+    --color-background: #fafafa; /* Page background */
+
+    /* Accent / Feedback */
+    --color-bright: #f04438; /* Buttons, Warning text */
+    --color-temperature: #4DA8DA /* For Temperature Widget */
+}
+
+/* Global Styles */
+body {
+    background-color: var(--color-background);
+    color: var(--color-dark);
+    font-family: 'Figtree', sans-serif;
+    /* Default text color for subdued element */
+    line-height: 1.5;
+}

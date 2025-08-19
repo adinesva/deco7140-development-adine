@@ -2,22 +2,49 @@
 
 /* Remove all default margin and padding */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; /* keeps sizing predictable */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* keeps sizing predictable */
 }
 
 /* Reset headings and paragraphs */
-h1, h2, h3, h4, h5, h6, p {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;   /* inherit base font size */
-  font-weight: normal; /* remove browser bold defaults on headings */
-  line-height: 1.4;  /* set a neutral line height */
+h3,
+h4,
+h5,
+h6,
+
+h1 {
+    font-size: 4rem; /* 32px */
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+h5 {
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    font-size: 100%; /* inherit base font size */
+    font-weight: normal; /* remove browser bold defaults on headings */
+    line-height: 1.4; /* set a neutral line height */
 }
 
 /* Optional: inherit fonts for everything */
 body {
-  font-size: 16px;   /* set your base font size */
-  font-family: sans-serif;
+    font-size: 16px; /* set your base font size */
+    font-family: sans-serif;
 }
