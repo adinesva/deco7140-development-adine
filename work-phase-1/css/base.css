@@ -18,6 +18,7 @@
 
     /* Accent / Feedback */
     --color-bright: #f04438; /* Buttons, Warning text */
+    --color-temperature: #4DA8DA /* For Temperature Widget */
 }
 
 /* Global Styles */

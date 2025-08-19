@@ -8,26 +8,27 @@ function fetchTemperature() {
         return;
     }
 
-    // This is the information for our location (Brisbane, Australia)
+    // Location: Brisbane, Australia
     const latitude = -27.4705;
     const longitude = 153.0260;
 
-    const apiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}¤t_weather=true`;
+    // FIXED: "current_weather=true"
+    const apiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`;
 
     fetch(apiUrl)
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
-            return response.json(); // Convert the response to JSON - an object
+            return response.json(); 
         })
         .then(data => {
             const temperature = data.current_weather.temperature;
-            temperatureValue.textContent = temperature; // Update UI
+            temperatureValue.textContent = `${temperature} °C`; // Display with unit
         })
         .catch(error => {
             console.error("Error fetching temperature:", error);
-            temperatureValue.textContent = "N/A"; // Handle errors gracefully
+            temperatureValue.textContent = "N/A";
         });
 }
 
