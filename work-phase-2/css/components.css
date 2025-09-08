@@ -1,6 +1,50 @@
 /* INTERACTIVE HIGHLIGHTING */
 /* Base Highlight Style */
 
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.simple-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    width: 100%;
+    margin: 10px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.simple-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.10);
+}
+
+.simple-card ul li::marker {
+  content: "•";            /* your emoji marker */
+  font-size: 1.2em;          /* resize if needed */
+}
+
+.explain-card-green {
+    background-color: #ECFDF3;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 100%;
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .interactive-highlight {
     position: relative; /* Allows for positioning of extra elements (e.g., tooltip numbers) */
     background-color: rgba(
@@ -149,4 +193,208 @@
     .flip-card-container {
         grid-template-columns: repeat(3, 1fr);
     }
+}
+
+/* Navigation bar container */
+nav {
+  background-color: var(--primary-color);
+  padding: 1rem 1rem;
+}
+
+/* List reset + flex layout */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem; /* spacing between items */
+}
+
+/* Links inside the nav */
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Hover state */
+nav a:hover {
+  color: #f39c12; /* golden highlight */
+}
+
+/* Hamburger button hidden by default */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ----- Mobile styles ----- */
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* hide menu by default */
+    flex-direction: column;
+    background: var(--primary-color);
+    padding: 1rem;
+  }
+
+  nav ul.active {
+    display: flex; /* show when toggled */
+  }
+
+  .menu-toggle {
+    display: block; /* show hamburger */
+  }
+}
+
+.interview-card {
+  background: #ffffff;              /* white background */
+  border-radius: 12px;              /* smooth rounded corners */
+  padding: 1.5rem 2rem;             /* inner spacing */
+  padding-left: 1.2rem;
+  margin: 1.5rem 0;                 /* spacing between cards */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* soft shadow */
+  border: 1px solid #e5e7eb;        /* subtle border for structure */
+}
+
+.interview-card ul li::marker {
+  content: "🌼 ";            /* your emoji marker */
+  font-size: 1.2em;          /* resize if needed */
+  color: #ffb400;            /* you can style the emoji */
+}
+/* using a colour variable but changing the opacity/transparency */
+.response {
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: color-mix(in srgb, var(--secondary-color) 10%, transparent); /* color variable transparency */
+}
+
+.interactive-highlight-stories {
+    position: relative; /* Allows for positioning of extra elements (e.g., tooltip numbers) */
+    background-color: rgba(
+        255,
+        215,
+        0,
+        0.3
+    ); /* Light yellow highlight with 30% transparency */
+    cursor: pointer; /* Changes cursor to indicate interactivity */
+    padding: 2px 5px; /* Adds small space inside the highlight for better readability */
+    border-radius: 5px; /* Rounds the corners slightly for a softer look */
+    transition: background 0.3s ease; /* Smooth transition effect when background changes */
+}
+
+/* Tooltip Styling for Highlighted Text */
+.interactive-highlight-stories::after {
+    content: attr(data-userstory); /* get correct information */
+    position: absolute; /* Positions the tooltip relative to the highlighted text */
+    top: -5px; /* Moves the tooltip slightly above the highlighted text */
+    right: -15px; /* Moves the tooltip slightly to the right of the highlighted text */
+    background: var(--secondary-color);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    width: 356px; /* Sets a fixed width for the tooltip */
+    height: 100px; /* Sets a fixed height, making the tooltip a perfect circle */
+    padding: 0 12px;
+    display: flex; /* Uses Flexbox to center the text inside the circle */
+    align-items: center; /* Vertically centers the text inside the tooltip */
+    justify-content: center; /* Horizontally centers the text inside the tooltip */
+    border-radius: 8px; /* Creates rounded corners */
+    opacity: 0; /* Initially hides the tooltip */
+    transition: opacity 0.3s ease; /* Smoothly fades in the tooltip by changing the opacity */
+}
+
+/* Show Number on Hover (Desktop) */
+@media (hover: hover) {
+    .interactive-highlight-stories:hover::after {
+        opacity: 1;
+    }
+}
+
+/* Show Number on Tap (Mobile) */
+.interactive-highlight-stories:focus::after,
+.interactive-highlight-stories:active::after {
+    opacity: 1;
+}
+
+.user-story-box {
+    border: 1px solid var(--secondary-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    background-color: #fff; /* white background */
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.user-story-box:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.user-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--secondary-color)
+}
+
+.question {
+  font-weight: bold;
+}
+
+.inactive-text {
+  color: #98A2B3;
+}
+
+.warning-text {
+  color: #F79009;
+}
+
+.warning-card-yellow {
+    background-color: #FEF0C7;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 100%;
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.warning-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    width: 100%;
+    margin: 10px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.warning-card ul li::marker {
+  content: "⚠️ ";            /* your emoji marker */
+  font-size: 1.2em;          /* resize if needed */
+  color: #ffb400;            /* you can style the emoji */
+}
+
+.inactive-card {
+    background-color: #F2F4F7;
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 100%;
+    margin: 10px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
