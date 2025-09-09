@@ -57,6 +57,9 @@ body {
 /* Typography (Using Golden Ratio) */
 h1 {
     font-size: 4.2rem; /* 2.6 x 1.618 rounded */
+    overflow-wrap: anywhere;   /* or word-break: break-word; */
+    hyphens: auto;             /* optional: allow hyphenation */
+    text-wrap: balance; 
 }
 
 h2 {
