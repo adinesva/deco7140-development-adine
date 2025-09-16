@@ -1,35 +1,48 @@
-/* CSS Variables to Define Colour Scheme */
-:root {
-    --primary-color: #2c3e50; /* Dark Blue */
-    --secondary-color: #3498db; /* Bright Blue */
-    --accent-color: #e74c3c; /* Red */
-    --text-color: #333; /* Dark Grey */
-    --background-color: #f5f5f5; /* Light Grey */
-    --hover-color: #FF9A00 /* Text on Hover */
-}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
 body {
-    font-family: "Onest", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    color: var(--text-color); /* color applies to text */
-    background-color: var(--background-color); /* Apply color to background */
+    line-height: 1;
 }
-
-/* Typography (Using Golden Ratio) */
-h1 {
-    font-size: 4.2rem; /* 2.6 x 1.618 rounded */
+ol, ul {
+    list-style: none;
 }
-
-h2 {
-    font-size: 2.6rem; /* h1 / φ */
+blockquote, q {
+    quotes: none;
 }
-
-h3 {
-    font-size: 1.6rem; /* h2 / φ */
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
 }
-
-p {
-    font-size: 1rem; /* h3 / φ */
-    line-height: 1.6; /* keep rhythm readable */
-}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+} 
