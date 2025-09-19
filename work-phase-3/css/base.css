@@ -149,3 +149,9 @@ nav ul {
     align-items: center;
   }
 }
+
+.responsive-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}              
