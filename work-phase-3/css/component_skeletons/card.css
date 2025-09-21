@@ -43,7 +43,7 @@
 .card-body p {
     margin: 0;
     font-size: 0.95rem;
-    color: #888888;
+    color: var(--grey-400);
     line-height: 1.4;
 }
 
