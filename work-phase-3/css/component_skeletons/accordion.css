@@ -2,21 +2,11 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-}
-
-.accordion-item {
-    border-radius: 8px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-.accordion-item.open .accordion-content {
-    padding: 1rem;
-    max-height: 500px;
-}                                                    
+}                                                  
 
 .accordion-header {
     padding: 1rem;
+    padding-left: 2rem;
     font-weight: bold;
     font-size: 1rem;
     width: 100%;
@@ -28,6 +18,30 @@
 
 }
 
+.accordion-header::before {
+    content: "▶";
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.open .accordion-header::before {
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.accordion-item {
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.accordion-item.open .accordion-content {
+    padding: 1rem;
+    max-height: 500px;
+}  
+
 .accordion-content {
     max-height: 0;
     overflow-y: auto;
@@ -35,4 +49,23 @@
     transition: max-height 0.4s ease, padding 0.4s ease;
     background: white;
     font-size: 0.95rem;
+}
+
+.accordion-nested {
+    margin-left: 1rem;
+    border-left: 3px solid var(--grey-500);
+    padding-left: 1rem;
+    }
+
+.accordion-nested .accordion-header {
+    background-color: var(--accent1-color);
+    color: white;
+    border: 1px solid var(--accent1-color);
+    border-radius: 10px 10px 0 0;
+}
+
+.accordion-nested .accordion-content {
+    color: var(--accent1-color);
+    border: 1px solid var(--accent1-color);
+    border-radius: 0 0 10px 10px;
 }

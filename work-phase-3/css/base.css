@@ -3,7 +3,9 @@
     --secondary-color: #48A6A7;
     --accent-color: #FF6363; 
     --text-color: #333; /* Dark Grey */
+    --grey-500: #999999;
     --background-color: #f5f5f5; /* Light Grey */
+    --accent1-color: #F38C79;
     --hover-color: #FF9A00 /* Text on Hover */
 }
 
