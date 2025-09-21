@@ -109,6 +109,77 @@
                         used for summarising content or directing users to more
                         detail.
                     </p>
+                    <div class="card-container">
+                        <div class="card">
+                            <img
+                                src="assets/visceral-design.jpg"
+                                alt="Visceral Design"
+                            />
+                            <div class="card-body">
+                                <h3>Visceral Design</h3>
+                                <p>
+                                    Designing for first impressions covering
+                                    information architecture, layout, typography
+                                    and colour.
+                                </p>
+                                <button
+                                    onclick="window.location.href='visceral_design.html'"
+                                >
+                                    Learn More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <h2 class="m-t-3">Button Component</h2>
+                    <div class="button-example">
+                        <h3>Primary Button</h3>
+                        <br />
+                        <!-- Default -->
+                        <h4>Default</h4>
+                        <button class="btn-primary">Button</button>
+
+                        <!-- Hover -->
+                        <h4>Hover</h4>
+                        <button class="btn-primary hover-demo">Button</button>
+
+                        <!-- Active / Pressed -->
+                        <h4>Pressed</h4>
+                        <button class="btn-primary active-demo">Button</button>
+
+                        <!-- Disabled -->
+                        <h4>Disabled</h4>
+                        <button class="btn-primary" disabled>Button</button>
+
+                        <p class="explanation">
+                            Clear labels like “Join Now” make buttons
+                            understandable. Visual states (default, hover,
+                            pressed, disabled) give users feedback and build
+                            confidence.
+                        </p>
+                    </div>
+                    <br />
+                    <div class="button-selection">
+                        <h3 class="m-y-2">CTA Button</h3>
+                        <button class="btn-primary">Sign Up</button>
+                    </div>
+                    <div class="button-section">
+                        <h3 class="m-y-2">Accessible Icon-Only Button</h3>
+                        <button class="btn-icon" aria-label="Search">🔍</button>
+                        <p class="explanation">
+                            Icon-only buttons must include
+                            <code>aria-label</code> so screen readers announce
+                            their purpose clearly.
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <h2 class="m-t-3">Form Example</h2>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required />
+                    <button aria-label="Close Form">❌</button>
+                    <input type="email" id="email" name="email" required />
                 </article>
             </div>
         </main>
@@ -124,6 +195,6 @@
             <a href="work-phase-4/index">Work Phase 4</a>
         </section>
         <!-- Linking External Javascript -->
-        <script type="module" src="js/visceral_design.js"></script>
+        <script type="module" src="js/behavioural_design.js"></script>
     </body>
 </html>

@@ -163,11 +163,69 @@ nav ul {
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
     width: 100%;
     max-width: 350px;
     margin: 10px;
     text-align: center;
     display: inline-block;
+}
+
+/* Base style */
+.btn-primary {
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+/* Hover */
+.btn-primary:hover {
+    background: var(--secondary2-color);
+}
+
+/* Active / Pressed */
+.btn-primary:active {
+    background: var(--secondary3-color);
+    transform: scale(0.97);
+}
+
+/* Disabled */
+.btn-primary:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Demo states */
+.hover-demo {
+    background: var(--secondary2-color);
+}
+.active-demo {
+    background: var(--secondary3-color);
+    transform: scale(0.97);
+}
+
+/* Icon-only button */
+.btn-icon {
+    background: var(--secondary-color);
+    border: none;
+    color: white;
+    font-size: 1.25rem;
+    padding: 0.75rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+.btn-icon:hover {
+    background: var(--secondary2-color);
+}
+.btn-icon:active {
+    background: var(--secondary3-color);
+    transform: scale(0.95);
 }
