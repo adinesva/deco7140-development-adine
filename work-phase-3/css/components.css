@@ -1,4 +1,5 @@
-@import './component_skeletons/accordion.css';
+@import "./component_skeletons/accordion.css";
+@import url("component_skeletons/card.css");
 
 .hero-text {
     font-size: 1.25rem;
@@ -24,7 +25,7 @@ nav ul {
     top: 0;
     width: 100vw;
     background-color: var(--secondary-color);
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
     display: none;
 }
 
@@ -37,7 +38,7 @@ nav ul {
 }
 
 #nav-desktop:hover {
-    color: white
+    color: white;
 }
 
 /* MENUS */
@@ -57,7 +58,7 @@ nav ul {
     bottom: 0;
     width: 100vw;
     background-color: var(--secondary-color);
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #nav-mobile ul li a {
@@ -67,13 +68,52 @@ nav ul {
     text-decoration: none;
 }
 
-/* import skeletons */
-@import url("component_skeletons/card.css");
-
 /* reusable containers */
 .card-container {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    font-size: 1rem;
+    margin: 1rem 0;
+    color: #555;
+}
+
+.breadcrumb ol {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb li + li::before {
+    content: "›"; /* or ">" */
+    margin: 0 0.5rem;
+    color: #888;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb [aria-current="page"] {
+    font-weight: bold;
+    color: #333;
 }

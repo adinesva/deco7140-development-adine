@@ -5,13 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <!-- CSS Linking -->
-        <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/visceral_design.css" />
+        <link rel="stylesheet" href="css/component_skeletons/card.css" />
+        <link rel="stylesheet" href="css/component_skeletons/gallery.css" />
+        <link rel="stylesheet" href="css/component_skeletons/viewer.css" />
 
         <link rel="icon" href="assets/favicon.ico" />
-        <title>Adine's Work Phase 2</title>
+        <title>Adine's Work Phase 3</title>
 
         <!-- Google fonts linking -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,24 +24,94 @@
             href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap"
             rel="stylesheet"
         />
-
-        <!-- Linking External Javascript -->
-        <!-- <script src="js/index.js"></script> -->
     </head>
     <body>
-        <!-- Start Page Structure -->
         <nav id="nav-mobile" aria-label="Main Navigation">
-
+            <ul>
+                <li>
+                    <a href="index.html"><span class="icon">🏠</span></a>
+                </li>
+                <li>
+                    <a href="site_map.html"><span class="icon">🧭</span></a>
+                </li>
+                <li>
+                    <a href="style_guide.html"><span class="icon">🎨</span></a>
+                </li>
+                <li>
+                    <a href="ethical_response.html"
+                        ><span class="icon">⚖️</span></a
+                    >
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        ><span class="icon">🤖</span></a
+                    >
+                </li>
+            </ul>
         </nav>
-        <nav id="nav-desktop" aria-label="Main Navigation">
 
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="site_map.html">Site Map</a>
+                </li>
+                <li>
+                    <a href="style_guide.html" aria-current="page"
+                        >Style Guide</a
+                    >
+                </li>
+                <li>
+                    <a href="ethical_response.html">
+                        <span class="icon">Ethical Response</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html">
+                        <span class="icon">GenAI Acknowledgement</span>
+                    </a>
+                </li>
+            </ul>
         </nav>
         <main>
             <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="style_guide.html">Style Guide</a></li>
+                        <li aria-current="page">Visceral Design</li>
+                    </ol>
+                </nav>
                 <h1>Visceral Design</h1>
+                <h3 class="hero-text">
+                    The focus of this section of the Style Guide is ensuring the
+                    user has a good first impression of the site.
+                </h3>
+                <article>
+                    <h2 class="m-t-3">Page Layouts</h2>
+                    <section class="gallery m-t-3">
+                        <img src="assets/homepage-1.jpg" alt="Home Page" />
+                        <img src="assets/news-1.jpg" alt="News" />
+                        <img src="assets/community-1.jpg" alt="Community" />
+                        <img
+                            src="assets/homepage-mobile-1.jpg"
+                            alt="Homepage Mobile"
+                        />
+                    </section>
+                    <aside class="viewer" id="viewer" aria-hidden="true">
+                        <button
+                            id="close-viewer"
+                            aria-label="Close image viewer"
+                        >
+                            ✖
+                        </button>
+                        <img id="viewer-img" src="" alt="" />
+                        <p id="viewer-caption"></p>
+                    </aside>
+                </article>
             </div>
         </main>
-            
+
         <article>
             <p>Welcome to Adine's Work Phase 3!</p>
         </article>
@@ -48,5 +122,7 @@
             <a href="work-phase-3/index">Work Phase 3</a>
             <a href="work-phase-4/index">Work Phase 4</a>
         </section>
+        <!-- Linking External Javascript -->
+        <script type="module" src="js/visceral_design.js"></script>
     </body>
 </html>
