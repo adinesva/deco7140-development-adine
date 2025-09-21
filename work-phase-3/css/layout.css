@@ -1,3 +1,13 @@
+:root {
+    --space-0: 0;
+    --space-1: 0.25rem; /* 4px */
+    --space-2: 0.5rem; /* 8px */
+    --space-3: 0.75rem; /* 12px */
+    --space-4: 1rem; /* 16px */
+    --space-5: 1.25rem; /* 20px */
+    --space-6: 1.5rem; /* 24px */
+}
+
 /* PAGE CONTAINER */
 /* Mobile */
 .container {
@@ -5,14 +15,14 @@
     width: 90vw;
     margin: 0 auto;
     /* background-color: #f0f0f0; /* light grey */
-}                                                        
+}
 
 @media screen and (min-width: 768px) {
-  .container {
-    width: 70vw; /* 70% of viewport width */
-    /* background-color: #f0f0f0; /* light grey */
-    margin: 0 auto; /* optional: center the container */
-  }
+    .container {
+        width: 70vw; /* 70% of viewport width */
+        /* background-color: #f0f0f0; /* light grey */
+        margin: 0 auto; /* optional: center the container */
+    }
 }
 
 /* 2. Margin helpers */

@@ -1,0 +1,24 @@
+/* card customisation for style_guide page */
+.card {
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* responsive widths */
+@media (max-width: 768px) {
+    .card {
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) {
+    .card {
+    width: calc(33.33% - 1rem); /* 3 per row with gap */
+  }
+}
