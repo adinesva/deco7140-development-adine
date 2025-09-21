@@ -9,11 +9,6 @@
         <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/components.css" />
-        <link rel="stylesheet" href="css/page_css/visceral_design.css" />
-        <link rel="stylesheet" href="css/component_skeletons/card.css" />
-        <link rel="stylesheet" href="css/component_skeletons/gallery.css" />
-        <link rel="stylesheet" href="css/component_skeletons/viewer.css" />
-
         <link rel="icon" href="assets/favicon.ico" />
         <title>Adine's Work Phase 3</title>
 
@@ -176,10 +171,55 @@
                 </article>
                 <article>
                     <h2 class="m-t-3">Form Example</h2>
-                    <label for="name">Full Name:</label>
-                    <input type="text" id="name" name="name" required />
-                    <button aria-label="Close Form">❌</button>
-                    <input type="email" id="email" name="email" required />
+                    <form id="community-form" enctype="multipart/form-data">
+                        <!-- Full Name -->
+                        <label for="name">Full Name *</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your full name"
+                            required
+                        />
+
+                        <!-- Email -->
+                        <label for="email">Email *</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            required
+                        />
+
+                        <!-- Message -->
+                        <label for="message">Message (optional)</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Introduce yourself or leave a message"
+                            rows="4"
+                        ></textarea>
+
+                        <!-- Photo -->
+                        <label for="photo"
+                            >Upload Photo (optional, max 10MB)</label
+                        >
+                        <input
+                            type="file"
+                            id="photo"
+                            name="photo"
+                            accept="image/*"
+                        />
+
+                        <!-- Submit -->
+                        <button type="submit" class="btn btn-primary">
+                            Join the Community
+                        </button>
+
+                        <!-- Feedback message -->
+                        <p id="form-feedback" aria-live="polite"></p>
+                    </form>
                 </article>
             </div>
         </main>

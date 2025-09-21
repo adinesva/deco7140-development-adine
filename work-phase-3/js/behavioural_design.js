@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             feedback.textContent = "Submitting...";
 
-            const { success, data } = await postFormData(form, "INSERT_API_ENDPOINT", {
+            const { success, data } = await postFormData(form, 'https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/community/', {
                 student_number: "s4984748",
                 uqcloud_zone_id: "f70865f8",
             });
