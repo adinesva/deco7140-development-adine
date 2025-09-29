@@ -1,6 +1,16 @@
 @import "./component_skeletons/accordion.css";
 @import url("component_skeletons/card.css");
 
+ul {
+    list-style-type: disc; /* shows standard bullets */
+    margin-left: 1rem; /* indentation */
+    padding-left: 1rem; /* extra spacing */
+}
+
+li {
+    margin-bottom: 0.5rem; /* spacing between lines */
+}
+
 .hero-text {
     font-size: 1.25rem;
     font-weight: 500;
@@ -327,4 +337,12 @@ td:first-child {
     margin-top: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+.simple-card {
+    flex: 1 1 300px;
+    background-color: #fff; /* white background */
+    border: 1px solid var(--grey-500); /* subtle border */
+    border-radius: 8px; /* rounded corners */
+    padding: 1.2rem;
 }

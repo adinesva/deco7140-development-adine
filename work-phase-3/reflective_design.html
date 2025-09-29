@@ -5,13 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <!-- CSS Linking -->
-        <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/components.css" />
-
+        <link rel="stylesheet" href="css/page_css/reflective_design.css" />
+        <link rel="stylesheet" href="css/component_skeletons/accordion.css" />
         <link rel="icon" href="assets/favicon.ico" />
-        <title>Adine's Work Phase 2</title>
+        <title>Adine's Work Phase 3</title>
 
         <!-- Google fonts linking -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,25 +23,476 @@
         />
 
         <!-- Linking External Javascript -->
-        <!-- <script src="js/index.js"></script> -->
+        <script type="module" src="js/reflective_design.js"></script>
     </head>
     <body>
-        <!-- Start Page Structure -->
         <nav id="nav-mobile" aria-label="Main Navigation">
-
+            <ul>
+                <li>
+                    <a href="index.html"><span class="icon">🏠</span></a>
+                </li>
+                <li>
+                    <a href="site_map.html"><span class="icon">🧭</span></a>
+                </li>
+                <li>
+                    <a href="style_guide.html"><span class="icon">🎨</span></a>
+                </li>
+                <li>
+                    <a href="ethical_response.html"
+                        ><span class="icon">⚖️</span></a
+                    >
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        ><span class="icon">🤖</span></a
+                    >
+                </li>
+            </ul>
         </nav>
-        <nav id="nav-desktop" aria-label="Main Navigation">
 
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="site_map.html">Site Map</a>
+                </li>
+                <li>
+                    <a href="style_guide.html" aria-current="page"
+                        >Style Guide</a
+                    >
+                </li>
+                <li>
+                    <a href="ethical_response.html">
+                        <span class="icon">Ethical Response</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html">
+                        <span class="icon">GenAI Acknowledgement</span>
+                    </a>
+                </li>
+            </ul>
         </nav>
         <main>
             <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="style_guide.html">Style Guide</a></li>
+                        <li aria-current="page">Reflective Design</li>
+                    </ol>
+                </nav>
                 <h1>Reflective Design</h1>
+                <h3 class="hero-text">
+                    The focus of this section of the style guide is supporting
+                    user meaning and identity.
+                </h3>
+                <br />
+                <h2 class="m-t-3">Website Identity</h2>
+                <section class="m-y-5">
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                Value Mapping
+                            </button>
+                            <div class="accordion-content">
+                                <h2>Value Mapping Table</h2>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Value</th>
+                                            <th>Design Implication</th>
+                                            <th>Specific Element</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-label="Value">
+                                                Belonging & Inclusion
+                                            </td>
+                                            <td data-label="Design Implication">
+                                                Use welcoming language and a
+                                                culturally neutral tone
+                                            </td>
+                                            <td data-label="Specific Element">
+                                                Homepage tagline like
+                                                <em
+                                                    >“Welcome to Your New
+                                                    Community in Australia”</em
+                                                >
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="Value">
+                                                Belonging & Inclusion
+                                            </td>
+                                            <td data-label="Design Implication">
+                                                Support diverse identities,
+                                                cultures, and representation
+                                            </td>
+                                            <td data-label="Specific Element">
+                                                Community stories section with
+                                                user-submitted
+                                                photos/testimonials
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="Value">
+                                                Belonging & Inclusion
+                                            </td>
+                                            <td data-label="Design Implication">
+                                                Encourage interaction across
+                                                groups
+                                            </td>
+                                            <td data-label="Specific Element">
+                                                Event listings with tags and
+                                                filters
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="Value">
+                                                Trust & Credibility
+                                            </td>
+                                            <td data-label="Design Implication">
+                                                Providing clear and verified
+                                                information
+                                            </td>
+                                            <td data-label="Specific Element">
+                                                Resource hub with government
+                                                links (housing, healthcare,
+                                                study support)
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="Value">
+                                                Trust & Credibility
+                                            </td>
+                                            <td data-label="Design Implication">
+                                                Showing transparency &
+                                                authenticity
+                                            </td>
+                                            <td data-label="Specific Element">
+                                                Verified badge for trusted
+                                                organizations or community
+                                                leaders, in posts and community
+                                                lists
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="Value">
+                                                Trust & Credibility
+                                            </td>
+                                            <td data-label="Design Implication">
+                                                Maintain consistency in design
+                                            </td>
+                                            <td data-label="Specific Element">
+                                                Professional color palette,
+                                                typography, and layout standards
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="Value">
+                                                Empowerment
+                                            </td>
+                                            <td data-label="Design Implication">
+                                                Enable users to find communities
+                                                and events easily
+                                            </td>
+                                            <td data-label="Specific Element">
+                                                Searchable events, communities,
+                                                and volunteer opportunities
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="Value">
+                                                Empowerment
+                                            </td>
+                                            <td data-label="Design Implication">
+                                                Celebrate the achievements of
+                                                members
+                                            </td>
+                                            <td data-label="Specific Element">
+                                                Spotlight stories:
+                                                <em>“Member of the Month”</em>
+                                                or success stories
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="Value">
+                                                Empowerment
+                                            </td>
+                                            <td data-label="Design Implication">
+                                                Provide tools for contribution
+                                            </td>
+                                            <td data-label="Specific Element">
+                                                <em
+                                                    >Enabling members to post
+                                                    blog entries and submit an
+                                                    event.</em
+                                                >
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="m-y-5">
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                Meaning through Imagery and Tone
+                            </button>
+                            <div class="accordion-content">
+                                <div class="accordion-nested">
+                                    <div class="accordion-item">
+                                        <button class="accordion-header">
+                                            Identity Explaination
+                                        </button>
+                                        <div class="accordion-content">
+                                            <p class="m-y-3">
+                                                The website is made to provide
+                                                the impression that it is a
+                                                friendly, reliable, and
+                                                empowering resource for foreign
+                                                communities coming to Australia.
+                                                Every visitor should get a sense
+                                                that they have entered a place
+                                                designed specifically for them,
+                                                a secure, welcoming center where
+                                                support is constantly available
+                                                and diversity is welcomed.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="accordion-item">
+                                        <button class="accordion-header">
+                                            Emotional Tone
+                                        </button>
+                                        <div class="accordion-content">
+                                            <ul>
+                                                <li>
+                                                    Inclusive and Friendly:
+                                                    using approachable language,
+                                                    warm visuals, and
+                                                    multicultural representation
+                                                    so users feel they belong.
+                                                </li>
+                                                <li>
+                                                    Credible and Reliable:
+                                                    ensuring all information is
+                                                    accurate, verified, and
+                                                    clearly presented to build
+                                                    confidence and trust.
+                                                </li>
+                                                <li>
+                                                    Empowering and Supportive:
+                                                    encouraging users to not
+                                                    only access resources, but
+                                                    also share their own
+                                                    stories, join communities,
+                                                    and contribute to shaping
+                                                    their new life.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="accordion-item">
+                                        <button class="accordion-header">
+                                            Imagery Example
+                                        </button>
+                                        <div class="accordion-content">
+                                            <img
+                                                src="assets/example-1.png"
+                                                alt="Example 1 Imagery"
+                                            />
+                                            <img
+                                                src="assets/example-2.png"
+                                                alt="Example 2 Imagery"
+                                            />
+                                            <img
+                                                src="assets/example-3.png"
+                                                alt="Example 3 Imagery"
+                                            />
+                                            <h3>Generated using Gemini</h3>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="accordion-item">
+                                        <button class="accordion-header">
+                                            Home page Text Example
+                                        </button>
+                                        <div class="accordion-content">
+                                            <h2>Example 1:</h2>
+                                            <h3>
+                                                Welcome to Your New Community in
+                                                Australia. Starting a new
+                                                chapter in a new country is
+                                                exciting, but it can also feel
+                                                overwhelming. This platform is
+                                                here to make your journey
+                                                smoother, safer, and more
+                                                connected.
+                                            </h3>
+                                            <ul>
+                                                <li>
+                                                    🌏 Discover trusted
+                                                    resources about housing,
+                                                    work, study, and healthcare.
+                                                </li>
+                                                <li>
+                                                    🤝 Find communities and
+                                                    events where you can belong.
+                                                </li>
+                                                <li>
+                                                    💪 Share your own story and
+                                                    empower others on the same
+                                                    path.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="m-y-5">
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                Reflective Language and Expression
+                            </button>
+                            <div class="accordion-content">
+                                <h2 class="m-y-3">✅ Language Checklist</h2>
+                                <div class="card-container">
+                                    <div class="simple-card">
+                                        <h2>
+                                            Aboriginal and Torres Strait
+                                            Islander peoples
+                                        </h2>
+                                        <br />
+                                        <p>
+                                            Using culturally appropriate
+                                            language when addressing Aboriginal
+                                            and Torres Strait Islander peoples.
+                                        </p>
+                                        <p>
+                                            Example: Using the word 'Indigenous
+                                            Australians'.
+                                        </p>
+                                    </div>
+                                    <br />
+                                    <div class="simple-card">
+                                        <h2>Adressing Age diversity</h2>
+                                        <br />
+                                        <p>
+                                            When addressing age, use respectful
+                                            language and using consistent style.
+                                            Avoiding addressing age when it's
+                                            not relevant.
+                                        </p>
+                                        <p>
+                                            Example: Avoid using words like
+                                            'old' and 'young', and use numerals
+                                            while describing age.
+                                        </p>
+                                    </div>
+                                    <br />
+                                    <div class="simple-card">
+                                        <h2>
+                                            Adressing Culutral and Language
+                                            diversity
+                                        </h2>
+                                        <br />
+                                        <p>
+                                            Using inclusive and respectful
+                                            language while addressing cultures,
+                                            as Australia is diverse and have
+                                            many culture.
+                                        </p>
+                                        <p>
+                                            Example: Using the term
+                                            "multicultural communities". Refer
+                                            to people living in Australia as
+                                            "Australians". Use the words
+                                            "migrants, immigrants and new
+                                            arrivals" to address people recently
+                                            arrived in Australia.
+                                        </p>
+                                    </div>
+                                    <br />
+                                    <div class="simple-card">
+                                        <h2>
+                                            Adressing Gender and Sexual
+                                            diversity
+                                        </h2>
+                                        <br />
+                                        <p>
+                                            Respect people diverse gender and
+                                            sexual identity with inclusive
+                                            languages.
+                                        </p>
+                                        <p>
+                                            Example: Use gender neutral
+                                            language, avoid terms that
+                                            discriminate on the basis of a
+                                            person's gender or sexual identity.
+                                            Using gender-neutral pronouns such
+                                            as "they/them".
+                                        </p>
+                                    </div>
+                                    <br />
+                                    <div class="simple-card">
+                                        <h2>
+                                            Adressing Gender and Sexual
+                                            diversity
+                                        </h2>
+                                        <br />
+                                        <p>
+                                            Respect people diverse gender and
+                                            sexual identity with inclusive
+                                            languages.
+                                        </p>
+                                        <p>
+                                            Example: Use gender neutral
+                                            language, avoid terms that
+                                            discriminate on the basis of a
+                                            person's gender or sexual identity.
+                                            Using gender-neutral pronouns such
+                                            as "they/them".
+                                        </p>
+                                    </div>
+                                    <br />
+                                    <div class="simple-card">
+                                        <h2>
+                                            Adressing Disability and
+                                            neurodiversity
+                                        </h2>
+                                        <br />
+                                        <p>
+                                            Using inclusive language while
+                                            addressing disability and
+                                            neurodiversity.
+                                        </p>
+                                        <p>
+                                            Example: Only mention disability
+                                            when it's relevant to the content.
+                                            Use phrases like "person who is deaf
+                                            or hard of hearing", "person who is
+                                            blind or has low vision".
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </main>
-            
-        <article>
-            <p>Welcome to Adine's Work Phase 3!</p>
-        </article>
         <section>
             <h3>Links to my Work Phase Website</h3>
             <a href="work-phase-1/index">Work Phase 1</a>
@@ -48,5 +500,7 @@
             <a href="work-phase-3/index">Work Phase 3</a>
             <a href="work-phase-4/index">Work Phase 4</a>
         </section>
+        <!-- Linking External Javascript -->
+        <script type="module" src="js/behavioural_design.js"></script>
     </body>
 </html>
