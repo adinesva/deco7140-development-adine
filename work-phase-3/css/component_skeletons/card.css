@@ -39,6 +39,13 @@
     color: #333;
 }
 
+.card-body h5 {
+    margin: 0 0 0.75rem 0; /* space below title */
+    font-size: 1.25rem; /* slightly larger font */
+    font-weight: 600;
+    color: #333; /* dark grey for readability */
+}
+
 /* Text */
 .card-body p {
     margin: 0;
@@ -62,4 +69,18 @@
 
 .card-body button:hover {
     background: var(--primary-color);
+}
+
+.card-title {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.card-text {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
 }

@@ -18,6 +18,20 @@
     font-family: Manrope;
 }
 
+.accordion-revised {
+    padding: 1rem;
+    padding-left: 2rem;
+    font-weight: bold;
+    font-size: 1rem;
+    width: 100%;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    background-color: var(--success-color);
+    color: white;
+    font-family: Manrope;
+}
+
 .accordion-header::before {
     content: "▶";
     position: absolute;
@@ -77,6 +91,6 @@
 
 .accordion-nested .accordion-content {
     color: var(--text-color);
-    border: 1px solid var(--warning-color);
+    border: 1px solid var(--grey-500);
     border-radius: 0 0 10px 10px;
 }
