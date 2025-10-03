@@ -16,6 +16,16 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+.fullpage-card {
+    width: 100%;
+    max-width: none;
+    border-radius: 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+}
+
 /* Card image */
 .card img {
     width: 100%;
