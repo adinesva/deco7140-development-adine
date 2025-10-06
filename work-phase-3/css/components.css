@@ -346,3 +346,40 @@ td:first-child {
     border-radius: 8px; /* rounded corners */
     padding: 1.2rem;
 }
+
+/* Footer */
+.site-footer {
+    background-color: var(--secondary2-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    font-family: "Manrope", sans-serif;
+}
+
+.site-footer h3 {
+    font-size: 1.2rem;
+    /*font-weight: 600; */
+    margin-bottom: 1rem;
+    color: var(--secondary4-color)
+}
+
+.site-footer a {
+    display: inline-block;
+    margin: 0.5rem 0.75rem;
+    color: #c2fffb; /* soft aqua link */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.site-footer a:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+    text-decoration: underline;
+}
+
+.site-footer section {
+    max-width: 800px;
+    margin: 0 auto;
+}
