@@ -1,16 +1,19 @@
-const fetchGetData = (url, headers = {}) => {
+const fetchGetData = (url, body = {}) => {
     return fetch(url, {
-        method: 'GET',
-        headers: headers,
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(body),
     })
-    .then(response => {
+    .then((response) => {
         if (!response.ok) {
-            throw new Error('Server returned an error.');
-        }
-        return response.json();
+        throw new Error("Server returned an error.");
+    }
+    return response.json();
     })
-    .catch(error => {
-        console.error('Error fetching data:', error);
+    .catch((error) => {
+        console.error("Error fetching data:", error);
         return null;
     });
 };
