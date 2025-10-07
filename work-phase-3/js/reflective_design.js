@@ -23,6 +23,7 @@ fetchGetData(
         uqcloud_zone_id: "f70865f8",
     }
 ).then((data) => {
+    console.log("Fetched data:", data);
     if (!data) {
         container.innerHTML =
         '<p class="text-danger">Unable to load community members.</p>';
