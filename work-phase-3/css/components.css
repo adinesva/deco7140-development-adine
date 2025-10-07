@@ -47,8 +47,12 @@ nav ul {
     color: var(--text-color);
 }
 
-#nav-desktop:hover {
-    color: white;
+#nav-desktop ul li a:hover {
+    color: white; /* or any highlight color you like */
+    background-color: var(--primary-color); /* optional background highlight */
+    transition: all 0.3s ease; /* smooth hover transition */
+    padding: 0.8rem;
+    border-radius: 32px;
 }
 
 /* MENUS */
@@ -269,9 +273,9 @@ th {
     letter-spacing: 0.5px;
 }
 
-/* tr:hover {
+tr:hover {
     background-color: #f1f5f9;
-} */
+}
 
 td:first-child {
     font-weight: bold;

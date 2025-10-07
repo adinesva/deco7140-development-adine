@@ -26,6 +26,56 @@
     padding: 0.5rem;
 }
 
+.success-card {
+    background-color: #e6f7ec; /* light green background */
+    border-left: 6px solid #2e7d32; /* dark green accent border */
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.15);
+    color: #1b5e20; /* text color tone */
+}
+
+.success-card h2 {
+    color: #2e7d32; /* slightly darker header green */
+}
+
+.success-card ul li {
+    color: #2e7d32; /* consistent text tone */
+}
+
+.success-card li strong {
+    color: #1b5e20; /* rich green */
+    font-weight: 700;
+    margin-right: 4px;
+}
+
+.success-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(46, 125, 50, 0.25);
+    transition: all 0.2s ease;
+}
+
+.warning-card {
+    background-color: #fff9e6; /* soft yellow background */
+    border-left: 6px solid #f9a825; /* amber/dark yellow border */
+    box-shadow: 0 4px 12px rgba(249, 168, 37, 0.15);
+    color: #795548; /* warm brownish text for readability */
+}
+
+.warning-card h2 {
+    color: #f9a825; /* bright amber header */
+}
+
+.warning-card ul li strong {
+    color: #f57f17; /* darker orange-yellow for strong emphasis */
+    font-weight: 700;
+}
+
+.warning-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(249, 168, 37, 0.25);
+    transition: all 0.2s ease;
+}
+
+
 /* Card image */
 .card img {
     width: 100%;
