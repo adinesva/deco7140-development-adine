@@ -175,4 +175,12 @@ nav ul {
     display: block;
     max-width: 100%;
     height: auto;
-}              
+}
+
+.responsive-img-small {
+    width: 100%;
+    max-width: 256px; /* or 400px depending on how small you want it */
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
