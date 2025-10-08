@@ -20,7 +20,7 @@ body {
     font-style: normal;
     color: var(--text-color); /* color applies to text */
     background-color: var(--background-color); /* Apply color to background */
-    padding-top: 60px;
+    padding-top: 80px;
 }
 
 /* Typography (Using Golden Ratio) */
