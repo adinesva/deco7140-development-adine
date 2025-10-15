@@ -23,6 +23,11 @@
             href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
             rel="stylesheet"
         />
+
+        <!-- Linking JS-->
+        <script type="module" src="./js/modules/menu.js"></script>
+        <script type="module" src="./js/index.js"></script>
+        <script type="module" src="./js/communities.js"></script>
     </head>
     <body>
         <!-- Start Page Structure -->
@@ -62,7 +67,14 @@
         </nav>
 
         <nav id="nav-desktop" aria-label="Main Navigation">
-            <ul>
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <img
+                        src="./assets/na-logo.svg"
+                        alt="Navigating Australia logo"
+                    />
+                </a>
+                <ul>
                 <li><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="resource.html">Resources</a></li>
                 <li><a href="event.html">Events</a></li>
@@ -93,6 +105,7 @@
                     </ul>
                 </li>
             </ul>
+            </div>
         </nav>
 
         <main>
@@ -181,7 +194,7 @@
             <!-- Events -->
             <section class="events">
                 <div class="events-header">
-                                    <h2>Events</h2>
+                    <h2>Events</h2>
                     <a href="./event.html" class="see-all">See All</a>
                 </div>
 
@@ -217,15 +230,75 @@
                 </div>
             </section>
 
-            <div class="container">
-                <footer class="site-footer">
-                    <h3>Links to my Work Phase Website</h3>
-                    <a href="/work-phase-1/index.html">Work Phase 1</a>
-                    <a href="/work-phase-2/index.html">Work Phase 2</a>
-                    <a href="/work-phase-3/index.html">Work Phase 3</a>
-                    <a href="/work-phase-4/index.html">Work Phase 4</a>
-                </footer>
-            </div>
+            <!-- Communities -->
+            <section class="communities">
+                <!-- Header -->
+                <div class="communities-header">
+                    <div>
+                        <h2>Communities</h2>
+                        <p>Join with communities and connect with people!</p>
+                    </div>
+                    <a href="./community.html" class="see-all">See All</a>
+                </div>
+
+                <!-- Dynamic Grid -->
+                <div id="community-list" class="communities-grid">
+                    <!-- JS will inject cards here -->
+                </div>
+            </section>
+
+            <!-- Form -->
+            <section class="form">
+                <div class="community-form">
+                    <h3>Submit Your Community</h3>
+                    <form id="addCommunityForm">
+                        <label for="name">Community Name:</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                            placeholder="e.g. Hiking Enthusiasts"
+                        />
+
+                        <label for="email">Email:</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            placeholder="community@email.com"
+                        />
+
+                        <label for="category">Community Category:</label>
+                        <select id="category" name="category" required>
+                            <option value="">Select a category</option>
+                            <option value="student">Student</option>
+                            <option value="work">Work</option>
+                            <option value="sports">Sports</option>
+                            <option value="hobbies">Hobbies</option>
+                            <option value="volunteering">Volunteering</option>
+                            <option value="others">Others</option>
+                        </select>
+
+                        <button type="submit" class="btn-cta">Submit</button>
+                    </form>
+                    <p
+                        id="form-message"
+                        class="form-message"
+                        aria-live="polite"
+                    ></p>
+                </div>
+            </section>
+
+            <!-- Footer-->
+            <footer class="site-footer">
+                <h3>Links to my Work Phase Website</h3>
+                <a href="/work-phase-1/index.html">Work Phase 1</a>
+                <a href="/work-phase-2/index.html">Work Phase 2</a>
+                <a href="/work-phase-3/index.html">Work Phase 3</a>
+                <a href="/work-phase-4/index.html">Work Phase 4</a>
+            </footer>
         </main>
     </body>
 </html>

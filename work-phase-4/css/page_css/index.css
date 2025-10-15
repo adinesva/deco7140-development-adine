@@ -236,13 +236,13 @@
 
 .see-all {
     text-decoration: none;
-    color: var(--secondary-color, #33A1E0);
+    color: var(--secondary-color, #33a1e0);
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
 .see-all:hover {
-    color: var(--primary-color, #154D71);
+    color: var(--primary-color, #154d71);
 }
 
 /* ===== Grid Layout ===== */
@@ -250,4 +250,111 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
+}
+
+/* ===== Communities Section ===== */
+.communities {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.communities-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+}
+
+.communities-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-color, #333);
+}
+
+.communities-header p {
+    color: var(--grey-500, #666);
+    margin-top: 0.5rem;
+}
+
+.see-all {
+    text-decoration: none;
+    color: var(--secondary-color, #33a1e0);
+    font-weight: 600;
+    margin-top: 0.25rem;
+    transition: color 0.3s ease;
+}
+
+.see-all:hover {
+    color: var(--primary-color, #154d71);
+}
+
+/* ===== Community Grid ===== */
+.communities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+/* ===== Community Form ===== */
+.form {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.community-form {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+}
+
+.community-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color, #154d71);
+}
+
+.community-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.community-form label {
+    font-weight: 600;
+    color: var(--text-color, #333);
+}
+
+.community-form input,
+.community-form select {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+.community-form input:focus,
+.community-form select:focus {
+    border-color: var(--secondary-color, #33a1e0);
+    outline: none;
+}
+
+.community-form button {
+    align-self: flex-start;
+    background-color: var(--primary-color, #154d71);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.community-form button:hover {
+    background-color: var(--secondary-color, #33a1e0);
+    transform: translateY(-2px);
 }

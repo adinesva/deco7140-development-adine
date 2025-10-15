@@ -7,7 +7,7 @@
     background-color: #ffffff; /* White background */
     border-bottom: 1px solid #e0e0e0; /* Light divider */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Subtle shadow */
-    padding: 0.75rem 1rem;         
+    padding: 0.75rem 1rem;
     z-index: 1000;
 }
 
@@ -17,7 +17,6 @@
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 1.5rem;
     justify-content: center;
     align-items: center;
 }
@@ -37,16 +36,31 @@
 
 /* Hover state — turns text blue */
 #nav-desktop a:hover {
-    color: var(--secondary-color, #33A1E0); /* Blue text on hover */
+    color: var(--secondary-color, #33a1e0); /* Blue text on hover */
     background-color: transparent;
     border-radius: 0.3rem;
 }
 
 /* Active page highlight */
 #nav-desktop a[aria-current="page"] {
-    color: var(--secondary-color, #33A1E0); /* Blue text */
+    color: var(--secondary-color, #33a1e0); /* Blue text */
     font-weight: 600;
-    border-bottom: 2px solid var(--secondary-color, #33A1E0); /* Underline indicator */
+    border-bottom: 2px solid var(--secondary-color, #33a1e0); /* Underline indicator */
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* pushes logo left and links right */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== Logo ===== */
+.nav-logo img {
+    height: 32px;
+    width: auto;
+    display: block;
 }
 
 /* Dropdown container */
@@ -61,6 +75,12 @@
     min-width: 220px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     z-index: 10;
+
+    /* animation setup */
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.25s ease;
 }
 
 /* Dropdown items */
@@ -76,12 +96,17 @@
 }
 
 .dropdown-content a:hover {
-    background-color: var(--grey-100, #f5f5f5);
+    background-color: var(--secondary-color, #33a1e0);
+    color: #ffffff; /* ensure text is visible on blue */
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 /* Show dropdown on hover (desktop) */
-.dropdown:hover .dropdown-content {
-    display: block;
+.dropdown:hover .dropdown-content,
+.dropdown.open .dropdown-content {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 /* Caret style for Notes */
@@ -109,3 +134,39 @@
     }
 }
 
+/* Footer */
+.site-footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    font-family: "Outfit", sans-serif;
+}
+
+.site-footer h3 {
+    font-size: 1.2rem;
+    /*font-weight: 600; */
+    margin-bottom: 1rem;
+    color: var(--secondary4-color);
+}
+
+.site-footer a {
+    display: inline-block;
+    margin: 0.5rem 0.75rem;
+    color: #c2fffb; /* soft aqua link */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.site-footer a:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+    text-decoration: underline;
+}
+
+.site-footer section {
+    max-width: 800px;
+    margin: 0 auto;
+}
