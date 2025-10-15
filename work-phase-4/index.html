@@ -3,15 +3,130 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Adine's Work Phase 4</title>
+
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/components.css" />
+
+        <!-- Icon Linking -->
+        <link rel="icon" href="./assets/favicon.ico" />
+        <title>Navigating Australia</title>
+
+        <!-- Google fonts linking -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
-        <header>
-            <h1>Adine's Work Phase 4</h1>
-        </header>
-        <article>
-            <h2>Hey there!</h2>
-            <p>Hi there!</p>
-        </article>
+        <!-- Start Page Structure -->
+        <nav id="nav-mobile" aria-label="Main Navigation">
+            <ul>
+                <li>
+                    <a href="index.html" aria-current="page"
+                        ><span class="icon">🏠</span></a
+                    >
+                </li>
+                <li>
+                    <a href="resource.html"><span class="icon">🧭</span></a>
+                </li>
+                <li>
+                    <a href="event.html"><span class="icon">🎨</span></a>
+                </li>
+                <li>
+                    <a href="community.html"><span class="icon">⚖️</span></a>
+                </li>
+                <li>
+                    <a href="news.html"><span class="icon">🤖</span></a>
+                </li>
+                <li>
+                    <a href="about_us.html"><span class="icon">🎲</span></a>
+                </li>
+                <li>
+                    <a href="implementation_rationale.html"
+                        ><span class="icon">💡</span></a
+                    >
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        ><span class="icon">💻</span></a
+                    >
+                </li>
+            </ul>
+        </nav>
+
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="resource.html">Resources</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+
+                <!-- Dropdown -->
+                <li class="dropdown">
+                    <a
+                        href="#"
+                        class="dropbtn"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        >A4 Notes ▾</a
+                    >
+                    <ul class="dropdown-content" aria-label="submenu">
+                        <li>
+                            <a href="implementation_rationale.html"
+                                >Implementation Rationale</a
+                            >
+                        </li>
+                        <li>
+                            <a href="genai_mt_acknowledgement.html"
+                                >GenAI Acknowledgement</a
+                            >
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <section class="hero">
+                    <div class="hero-container">
+                        <!-- Left side -->
+                        <div class="hero-content">
+                            <h1>Connect. Belong. Thrive in Australia. 🇦🇺</h1>
+                            <p>
+                                Discover everything you need to belong, from local events
+                    and student groups to helpful guides and support networks.
+                    Start your journey with confidence and connection.
+                            </p>
+                            <a href="resource.html" class="btn-cta"
+                                >Explore Resources</a
+                            >
+                        </div>
+
+                        <!-- Right side: image -->
+                        <div class="hero-image">
+                            <img
+                                src="./assets/hero-image.webp"
+                                alt="Welcome Image to this website"
+                            />
+                        </div>
+                    </div>
+                </section>
+            <div class="container">
+                <footer class="site-footer">
+                    <h3>Links to my Work Phase Website</h3>
+                    <a href="/work-phase-1/index.html">Work Phase 1</a>
+                    <a href="/work-phase-2/index.html">Work Phase 2</a>
+                    <a href="/work-phase-3/index.html">Work Phase 3</a>
+                    <a href="/work-phase-4/index.html">Work Phase 4</a>
+                </footer>
+            </div>
+        </main>
     </body>
 </html>

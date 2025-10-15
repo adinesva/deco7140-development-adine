@@ -1,6 +1,7 @@
 // js/behavioural_design.js
-import { initViewer } from "./modules/viewer.js";
+
 import { postFormData } from "./modules/postFormData.js";
+import { initViewer } from "./modules/viewer.js";
 
 console.log("🔥 behavioural_design.js is running");
 
