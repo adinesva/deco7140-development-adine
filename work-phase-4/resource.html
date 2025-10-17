@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/page_css/resources.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/component_skeletons/card.css" />
+
+        <!-- Icon Linking -->
+        <link rel="icon" href="./assets/favicon.ico" />
+        <title>Navigating Australia</title>
+
+        <!-- Google fonts linking -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Linking JS-->
+        <script type="module" src="./js/modules/menu.js"></script>
+        <script type="module" src="./js/index.js"></script>
+        <script type="module" src="./js/communities.js"></script>
+    </head>
+    <body>
+        <!-- Start Page Structure -->
+        <nav id="nav-mobile" aria-label="Main Navigation">
+            <ul>
+                <li>
+                    <a href="index.html"><span class="icon">🏠</span></a>
+                </li>
+                <li>
+                    <a href="resource.html" aria-current="page"><span class="icon">🧭</span></a>
+                </li>
+                <li>
+                    <a href="event.html"><span class="icon">🎨</span></a>
+                </li>
+                <li>
+                    <a href="community.html"><span class="icon">⚖️</span></a>
+                </li>
+                <li>
+                    <a href="news.html"><span class="icon">🤖</span></a>
+                </li>
+                <li>
+                    <a href="about_us.html"><span class="icon">🎲</span></a
+                    >
+                </li>
+                <li>
+                    <a href="implementation_rationale.html"
+                        ><span class="icon">💡</span></a
+                    >
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        ><span class="icon">💻</span></a
+                    >
+                </li>
+            </ul>
+        </nav>
+
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <img
+                        src="./assets/na-logo.svg"
+                        alt="Navigating Australia logo"
+                    />
+                </a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resource.html" aria-current="page">Resources</a></li>
+                    <li><a href="event.html">Events</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li>
+                        <a href="about_us.html">About Us</a>
+                    </li>
+
+                    <!-- Dropdown -->
+                    <li class="dropdown">
+                        <a
+                            href="#"
+                            class="dropbtn"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            >A4 Notes ▾</a
+                        >
+                        <ul class="dropdown-content" aria-label="submenu">
+                            <li>
+                                <a href="implementation_rationale.html"
+                                    >Implementation Rationale</a
+                                >
+                            </li>
+                            <li>
+                                <a href="genai_mt_acknowledgement.html"
+                                    >GenAI Acknowledgement</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="about-section-hero">
+                <div class="about-container-hero">
+                    <!-- Left side -->
+                    <div class="about-content-hero">
+                        <h1>Resources</h1>
+                    </div>
+                </div>
+            </section>
+
+            <!-- G'day Section -->
+            <section class="about">
+                <div class="about-container">
+                    <div class="about-image">
+                        <img
+                            src="./assets/aboutus-photo.webp"
+                            alt="About Us Photo"
+                        />
+                    </div>
+
+                    <!-- Right side: text + CTA -->
+                    <div class="about-content">
+                        <h1>G'day!</h1>
+                        <p>
+                            At Navigating Australia, we believe every newcomer
+                            deserves to feel at home. Whether you're arriving to
+                            study, work, or start a new chapter, settling in a
+                            new country can be both exciting and overwhelming.
+                            That's why we're here, to make your transition
+                            smoother and your experience richer.
+                        </p>
+                        <br />
+                        <p>
+                            Our mission: To help every newcomer connect, belong,
+                            and thrive in their new Australian journey.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Our Story -->
+            <section class="about">
+                <div class="about-container">
+                    <div class="about-content">
+                        <h1>Our Story</h1>
+                        <p>
+                            Navigating Australia began with a simple question:
+                            “How can newcomers feel truly at home in a new
+                            country?” What started as a small idea among
+                            international students and migrants has grown into a
+                            community-driven platform designed to make settling
+                            in Australia easier, friendlier, and more connected.
+                        </p>
+                        <p>
+                            We've been in your shoes. Navigating new cities,
+                            cultures, and systems can be overwhelming. That's
+                            why we built a space where you can find the right
+                            information, meet people who understand your
+                            journey, and feel supported from your first day
+                            here. From newcomers, for newcomers. We're here to
+                            help you connect, belong, and thrive.
+                        </p>
+                    </div>
+
+                    <div class="about-image">
+                        <img
+                            src="./assets/aboutus-photo.webp"
+                            alt="About Us Photo"
+                        />
+                    </div>
+                </div>
+            </section>
+
+            <!-- Our Values -->
+            <section class="values">
+                <div class="values-header">
+                    <h1>Our Values</h1>
+                </div>
+                <div class="values-container">
+                    <div class="values-card">
+                        <img
+                            src="./assets/belonging.svg"
+                            alt="belonging and inclusion"
+                        />
+                        <h3 class="m-t-5">Belonging and Inclusion</h3>
+                        <p>
+                            We foster diverse communities where everyone feels
+                            welcomed and valued.
+                        </p>
+                    </div>
+
+                    <div class="values-card">
+                        <img
+                            src="./assets/trust.svg"
+                            alt="trust and credibility"
+                        />
+                        <h3 class="m-t-5">Trust and Credibility</h3>
+                        <p>
+                            We provide reliable information and genuine
+                            connections built on integrity.
+                        </p>
+                    </div>
+
+                    <div class="values-card">
+                        <img src="./assets/empowerment.svg" alt="Empowerment" />
+                        <h3 class="m-t-5">Empowerment</h3>
+                        <p>
+                            We enable newcomers to explore, engage, and grow
+                            confidently in Australia.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer-->
+            <footer class="site-footer">
+                <h3>Links to my Work Phase Website</h3>
+                <a href="/work-phase-1/index.html">Work Phase 1</a>
+                <a href="/work-phase-2/index.html">Work Phase 2</a>
+                <a href="/work-phase-3/index.html">Work Phase 3</a>
+                <a href="/work-phase-4/index.html">Work Phase 4</a>
+            </footer>
+        </main>
+    </body>
+</html>
