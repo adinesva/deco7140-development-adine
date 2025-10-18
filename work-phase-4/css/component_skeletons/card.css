@@ -25,9 +25,9 @@
 
 /* Card title */
 .resource-card h3 {
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 600;
-    color: var(--text-color, #333);
+    color: var(--background-color);
 }
 
 /* ===== Event Card ===== */
