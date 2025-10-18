@@ -272,3 +272,14 @@
     margin-top: 1rem;
     font-weight: 600;
 }
+
+#event-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.event-img {
+    height: 180px;
+    border-radius: 0.75rem 0.75rem 0 0;
+}

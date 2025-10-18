@@ -1,51 +1,30 @@
-const postFormData = async (formEl, endpointUrl, customHeaders = {}) => {
-    const formData = new FormData(formEl);
-
-    try {
-        const response = await fetch(endpointUrl, {
-            method: 'POST',
-            headers: customHeaders,
-            body: formData
-        });
-
-        const data = await response.json();
-
-        return {
-            success: response.ok && data.status === 'success',
-            data,
-        };
-    } catch (error) {
-        return {
-            success: false,
-            data: { message: 'Network or server error.', error },
-        };
-    }
-};
-
-export { postFormData };
-
-const fetchGetData = (url, params = {}) => {
-    const queryString = new URLSearchParams(params).toString();
-    const fullUrl = `${url}?${queryString}`;
+// ✅ postFormData.js
+export async function postFormData(form, url) {
+    const formData = new FormData(form);
     
-    return fetch(fullUrl, {
-        method: "GET",
-        headers: {
-            "Accept": "application/json",
-            "Content-Type": "application/json",
-        },
-        mode: "cors", // helps with local testing
-        })
-        .then((response) => {
-            if (!response.ok) {
-                throw new Error(`Server returned an error: ${response.status}`);
-            }
-            return response.json();
-        })
-        .catch((error) => {
-            console.error("Error fetching data:", error);
-            return null;
-        });
-    };
+    try {
+        const response = await fetch(url, {
+            method: "POST",
+            headers: {
+        // Required custom headers for DECO7140 API
+        student_number: "s4984748",
+        uqcloud_zone_id: "f70865f8"
+    },
+    body: formData
+    });
 
-export { fetchGetData };
+    const data = await response.json();
+
+    // Return standardized success flag
+    return {
+        success: response.ok,
+        data
+    };
+} catch (err) {
+    console.error("Error submitting form:", err);
+    return {
+        success: false,
+        data: { message: "Network or server error." }
+    };
+}
+}
