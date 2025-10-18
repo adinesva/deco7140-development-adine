@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const imageURL =
         event.genericevent_photo ||
-        "https://via.placeholder.com/400x200?text=No+Image";
+        "./assets/event-placeholder.svg";
 
       card.innerHTML = `
         <div class="event-img" 
