@@ -1,4 +1,10 @@
 /* ===== Resource Card ===== */
+.popular-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
 .resource-card {
     background-color: #f9f9f9;
     border-radius: 0.75rem;

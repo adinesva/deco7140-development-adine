@@ -1,64 +1,94 @@
-import { fetchGetData } from "./modules/getData.js";
+import { postFormData } from "./modules/postFormData.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("✅ communities.js loaded");
+  const form = document.getElementById("community-form");
+  const feedback = document.getElementById("form-feedback");
+  const communityList = document.getElementById("community-list");
 
-  const container = document.getElementById("community-list");
-  const form = document.getElementById("addCommunityForm");
+  // ======== FETCH COMMUNITY MEMBERS (GET) ========
+  async function fetchCommunity() {
+    try {
+      const response = await fetch(
+        "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/community/",
+        {
+          method: "GET",
+          headers: {
+            student_number: "s4984748",
+            uqcloud_zone_id: "f70865f8",
+          },
+        }
+      );
 
-  // ✅ Fetch community data from your API
-  fetchGetData(
-  "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/community/",
-  {
-    student_number: "s4984748",
-    uqcloud_zone_id: "f70865f8",
+      const text = await response.text();
+      console.log("Server said:", text);
+
+      if (!response.ok) {
+        throw new Error(`Server responded with ${response.status}`);
+      }
+
+      const members = JSON.parse(text);
+      console.log("Fetched community members:", members);
+
+      communityList.innerHTML = "";
+
+      // Loop through and render member cards
+      members.forEach((member) => {
+        const card = document.createElement("div");
+        card.classList.add("community-card");
+
+        const imageURL =
+          member.photo ||
+          "./assets/event-placeholder.svg";
+
+        card.innerHTML = `
+          <div class="community-photo" 
+               style="background-image: url('${imageURL}');
+                      background-size: cover;
+                      background-position: center;">
+          </div>
+          <div class="community-info">
+            <h3>${member.name}</h3>
+            <p><strong>Email:</strong> ${member.email}</p>
+            <p>${member.message || "No message provided."}</p>
+          </div>
+        `;
+
+        communityList.appendChild(card);
+      });
+    } catch (err) {
+      console.error("Error fetching community:", err);
+      communityList.innerHTML =
+        "<p style='color:red;'>Failed to load community members. Please try again later.</p>";
+    }
   }
-).then((data) => {
-  console.log("Fetched communities:", data);
 
-  // ✅ Access the array inside the object
-  if (!data || !Array.isArray(data.data)) {
-    container.innerHTML = "<p>⚠️ No communities found.</p>";
-    return;
-  }
+  // Fetch members when page loads
+  fetchCommunity();
 
-  // ✅ Render each community
-  data.data.forEach((community) => {
-    const card = document.createElement("div");
-    card.classList.add("community-card");
-    card.innerHTML = `
-      <div class="community-img"></div>
-      <h3>${community.name || "Unnamed Community"}</h3>
-    `;
-    container.appendChild(card);
+  // ======== SUBMIT COMMUNITY FORM (POST) ========
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    feedback.textContent = "Submitting...";
+
+    const { success, data } = await postFormData(
+      form,
+      "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/community/",
+      {
+        student_number: "s4984748",
+        uqcloud_zone_id: "f70865f8",
+      }
+    );
+
+    if (success) {
+      feedback.textContent = data.message || "✅ Joined successfully!";
+      feedback.style.color = "green";
+      form.reset();
+      fetchCommunity(); // refresh member list
+    } else {
+      console.log("Error response:", data);
+      feedback.textContent =
+        data.message || "❌ Something went wrong. Please try again.";
+      feedback.style.color = "red";
+    }
   });
-});
-
-
-  // ✅ Handle form submission
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const category = document.getElementById("category").value;
-  const message = document.getElementById("form-message");
-
-  // Simple validation
-  if (!name || !email || !category) {
-    message.textContent = "⚠️ Please fill out all fields.";
-    message.className = "form-message error";
-    return;
-  }
-
-  // Simulate submission (or connect to API later)
-  message.textContent = "⏳ Submitting...";
-  message.className = "form-message loading";
-
-  setTimeout(() => {
-    message.textContent = "✅ Thank you! Your community has been submitted successfully.";
-    message.className = "form-message success";
-    form.reset();
-  }, 1000);
-});
 });

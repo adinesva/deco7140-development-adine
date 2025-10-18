@@ -352,9 +352,38 @@
     border-radius: 0.5rem;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: Outfit;
 }
 
 .community-form button:hover {
     background-color: var(--secondary-color, #33a1e0);
     transform: translateY(-2px);
+}
+
+/* Community Card */
+.community-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+}
+
+.community-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #eee;
+}
+
+.community-info h3 {
+    color: var(--primary-color, #154d71);
+    margin-bottom: 0.25rem;
+}
+
+.community-info p {
+    color: var(--text-color, #333);
+    margin: 0.25rem 0;
 }

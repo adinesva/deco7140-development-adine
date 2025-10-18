@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/components.css" />
         <link rel="stylesheet" href="css/page_css/index.css" />
+        <link rel="stylesheet" href="css/page_css/event.css" />
         <link rel="stylesheet" href="css/component_skeletons/card.css" />
 
         <!-- Icon Linking -->
@@ -28,6 +29,7 @@
         <script type="module" src="./js/modules/menu.js"></script>
         <script type="module" src="./js/index.js"></script>
         <script type="module" src="./js/communities.js"></script>
+        <script type="module" src="./js/event.js"></script>
     </head>
     <body>
         <!-- Start Page Structure -->
@@ -75,36 +77,36 @@
                     />
                 </a>
                 <ul>
-                <li><a href="index.html" aria-current="page">Home</a></li>
-                <li><a href="resource.html">Resources</a></li>
-                <li><a href="event.html">Events</a></li>
-                <li><a href="community.html">Community</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="resource.html">Resources</a></li>
+                    <li><a href="event.html">Events</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
 
-                <!-- Dropdown -->
-                <li class="dropdown">
-                    <a
-                        href="#"
-                        class="dropbtn"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                        >A4 Notes ▾</a
-                    >
-                    <ul class="dropdown-content" aria-label="submenu">
-                        <li>
-                            <a href="implementation_rationale.html"
-                                >Implementation Rationale</a
-                            >
-                        </li>
-                        <li>
-                            <a href="genai_mt_acknowledgement.html"
-                                >GenAI Acknowledgement</a
-                            >
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+                    <!-- Dropdown -->
+                    <li class="dropdown">
+                        <a
+                            href="#"
+                            class="dropbtn"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            >A4 Notes ▾</a
+                        >
+                        <ul class="dropdown-content" aria-label="submenu">
+                            <li>
+                                <a href="implementation_rationale.html"
+                                    >Implementation Rationale</a
+                                >
+                            </li>
+                            <li>
+                                <a href="genai_mt_acknowledgement.html"
+                                    >GenAI Acknowledgement</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </nav>
 
@@ -168,24 +170,44 @@
                     <a href="resource.html" class="see-all">See All</a>
                 </div>
 
-                <div class="resources-grid">
+                <div class="popular-grid">
                     <div class="resource-card">
-                        <div class="resource-img"></div>
+                        <div class="resource-img">
+                            <img
+                                src="./assets/housing-card.svg"
+                                alt="Housing resources in Australia"
+                            />
+                        </div>
                         <h3>Housing</h3>
                     </div>
 
                     <div class="resource-card">
-                        <div class="resource-img"></div>
+                        <div class="resource-img">
+                            <img
+                                src="./assets/banking-card.svg"
+                                alt="Banking resources in Australia"
+                            />
+                        </div>
                         <h3>Banking</h3>
                     </div>
 
                     <div class="resource-card">
-                        <div class="resource-img"></div>
+                        <div class="resource-img">
+                            <img
+                                src="./assets/transport-card.svg"
+                                alt="Transport resources in Australia"
+                            />
+                        </div>
                         <h3>Transport</h3>
                     </div>
 
                     <div class="resource-card">
-                        <div class="resource-img"></div>
+                        <div class="resource-img">
+                            <img
+                                src="./assets/working-card.svg"
+                                alt="Working resources in Australia"
+                            />
+                        </div>
                         <h3>Working</h3>
                     </div>
                 </div>
@@ -198,36 +220,7 @@
                     <a href="./event.html" class="see-all">See All</a>
                 </div>
 
-                <div class="events-grid">
-                    <article class="event-card">
-                        <div class="event-img"></div>
-                        <div class="event-info">
-                            <h3>OZ Band Concert</h3>
-                            <p class="event-date">17 Sep 2025</p>
-                            <p class="event-location">Toowong, Brisbane</p>
-                        </div>
-                    </article>
-
-                    <article class="event-card">
-                        <div class="event-img"></div>
-                        <div class="event-info">
-                            <h3>OZ Band Concert</h3>
-                            <p class="event-date">17 Sep 2025</p>
-                            <p class="event-location">Toowong, Brisbane</p>
-                        </div>
-                    </article>
-
-                    <article class="event-card">
-                        <div class="event-img"></div>
-                        <div class="event-info">
-                            <h3>OZ Band Concert</h3>
-                            <p class="event-date">17 Sep 2025</p>
-                            <p class="event-location">Toowong, Brisbane</p>
-                        </div>
-                    </article>
-
-                    <!-- add more cards -->
-                </div>
+                <div id="event-list"></div>
             </section>
 
             <!-- Communities -->
@@ -245,51 +238,57 @@
                 <div id="community-list" class="communities-grid">
                     <!-- JS will inject cards here -->
                 </div>
-            </section>
 
-            <!-- Form -->
-            <section class="form">
+                <!-- Community Forms -->
                 <div class="community-form">
-                    <h3>Submit Your Community</h3>
-                    <form id="addCommunityForm">
-                        <label for="name">Community Name:</label>
+                    <h2>Join the Community</h2>
+
+                    <form id="community-form" enctype="multipart/form-data">
+                        <label for="name">Full Name*</label>
                         <input
                             type="text"
                             id="name"
                             name="name"
                             required
-                            placeholder="e.g. Hiking Enthusiasts"
+                            placeholder="e.g. Ava Smith"
                         />
 
-                        <label for="email">Email:</label>
+                        <label for="email">Email*</label>
                         <input
                             type="email"
                             id="email"
                             name="email"
                             required
-                            placeholder="community@email.com"
+                            placeholder="e.g. ava@example.com"
                         />
 
-                        <label for="category">Community Category:</label>
-                        <select id="category" name="category" required>
-                            <option value="">Select a category</option>
-                            <option value="student">Student</option>
-                            <option value="work">Work</option>
-                            <option value="sports">Sports</option>
-                            <option value="hobbies">Hobbies</option>
-                            <option value="volunteering">Volunteering</option>
-                            <option value="others">Others</option>
-                        </select>
+                        <label for="message">Message (optional)</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="3"
+                            placeholder="Say hello or share about yourself..."
+                        ></textarea>
 
-                        <button type="submit" class="btn-cta">Submit</button>
+                        <label for="photo">Photo (optional)</label>
+                        <input
+                            type="file"
+                            id="photo"
+                            name="photo"
+                            accept="image/*"
+                        />
+
+                        <p id="form-feedback" class="form-feedback"></p>
+
+                        <button type="submit" class="btn-cta">
+                            Join Community
+                        </button>
                     </form>
-                    <p
-                        id="form-message"
-                        class="form-message"
-                        aria-live="polite"
-                    ></p>
                 </div>
             </section>
+
+            <!-- Linking JS -->
+            <script type="module" src="./js/community.js"></script>
 
             <!-- Footer-->
             <footer class="site-footer">
