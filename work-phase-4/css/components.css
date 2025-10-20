@@ -333,3 +333,9 @@ td:first-child {
         color: var(--grey-500);
     }
 }
+
+a[target="_blank"] span[aria-hidden="true"] {
+    font-size: 0.8rem;
+    margin-left: 0.25rem;
+    color: var(--text-muted);
+}
