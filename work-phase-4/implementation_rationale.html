@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/page_css/about_us.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/component_skeletons/card.css" />
+
+        <!-- Icon Linking -->
+        <link rel="icon" href="./assets/favicon.ico" />
+        <title>Navigating Australia</title>
+
+        <!-- Google fonts linking -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Linking JS-->
+        <script type="module" src="./js/modules/menu.js"></script>
+        <script type="module" src="./js/index.js"></script>
+        <script type="module" src="./js/communities.js"></script>
+    </head>
+    <body>
+        <!-- Start Page Structure -->
+        <nav id="nav-mobile" aria-label="Main Navigation">
+            <ul>
+                <li>
+                    <a href="index.html"><span class="icon">🏠</span></a>
+                </li>
+                <li>
+                    <a href="resource.html"><span class="icon">🧭</span></a>
+                </li>
+                <li>
+                    <a href="event.html"><span class="icon">🎨</span></a>
+                </li>
+                <li>
+                    <a href="community.html"><span class="icon">⚖️</span></a>
+                </li>
+                <li>
+                    <a href="news.html"><span class="icon">🤖</span></a>
+                </li>
+                <li>
+                    <a href="about_us.html"
+                        ><span class="icon">🎲</span></a
+                    >
+                </li>
+                <li>
+                    <a href="implementation_rationale.html" aria-current="page"
+                        ><span class="icon">💡</span></a
+                    >
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        ><span class="icon">💻</span></a
+                    >
+                </li>
+            </ul>
+        </nav>
+
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <img
+                        src="./assets/na-logo.svg"
+                        alt="Navigating Australia logo"
+                    />
+                </a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resource.html">Resources</a></li>
+                    <li><a href="event.html">Events</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li>
+                        <a href="about_us.html">About Us</a>
+                    </li>
+
+                    <!-- Dropdown -->
+                    <li class="dropdown">
+                        <a
+                            href="#"
+                            class="dropbtn"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            >A4 Notes ▾</a
+                        >
+                        <ul class="dropdown-content" aria-label="submenu">
+                            <li>
+                                <a href="implementation_rationale.html" aria-current="page"
+                                    >Implementation Rationale</a
+                                >
+                            </li>
+                            <li>
+                                <a href="genai_mt_acknowledgement.html"
+                                    >GenAI Acknowledgement</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="about-section-hero">
+                <div class="about-container-hero">
+                    <!-- Left side -->
+                    <div class="about-content-hero">
+                        <h1>Implementation Rationale</h1>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Week 10 -->
+            <section class="about">
+                <div class="horizontal-container">
+                    <h2 class="m-y-3">📅 Week 10 - Reflection</h2>
+                    <div class="fullpage-card">
+                        <div class="card-body">
+                            <p>
+                                In week 10, I started to choose which pages I
+                                should implement. Those are: Home, Resources,
+                                Events, Community, News, and About Us. I have
+                                used GenAI to give me ideas and feedback about
+                                which page to implement, considering the
+                                importance, technical, and time constraints. One
+                                of the most important pages to implement is the
+                                Home page, as it serves as the main entry point
+                                of the website. During the development of the
+                                website, I considered the visceral, behavioural,
+                                and reflective design aspects. GenAI has helped
+                                me to make ideas and given me feedback regarding
+                                those aspects needed in my website.
+                            </p>
+
+                            <p>
+                                I started to manage my project using agile
+                                methodologies. In this sprint, I mostly focus on
+                                drafting, ideating, and making the website
+                                structure. Then, I also made the base styles,
+                                reusable components, helper classes, and drafted
+                                some copywriting for texts. During this phase, I
+                                started to consider which areas might need
+                                adjustment. I started to look at the API
+                                documentation, especially because I have to
+                                incorporate dynamic functionality in this
+                                website.
+                            </p>
+                        </div>
+                    </div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tool</th>
+                                <th>Use or Purpose</th>
+                                <th>Prompt</th>
+                                <th>Session Affected</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td data-label="Tool">ChatGPT</td>
+                                <td data-label="Use or Purpose">
+                                    Rephrasing sentences
+                                </td>
+                                <td data-label="Prompt">
+                                    “Rephrase this sentence to be more engaging”
+                                </td>
+                                <td data-label="Session Affected">All pages</td>
+                                <td data-label="Date">8 Oct 2025</td>
+                            </tr>
+
+                            <tr>
+                                <td data-label="Tool">ChatGPT</td>
+                                <td data-label="Use or Purpose">
+                                    Generate ideas for content
+                                </td>
+                                <td data-label="Prompt">
+                                    “Generate some ideas for events page”
+                                </td>
+                                <td data-label="Session Affected">
+                                    Events, Community
+                                </td>
+                                <td data-label="Date">9 Oct 2025</td>
+                            </tr>
+
+                            <tr>
+                                <td data-label="Tool">ChatGPT</td>
+                                <td data-label="Use or Purpose">
+                                    Code cleaning
+                                </td>
+                                <td data-label="Prompt">
+                                    “Fix the indentation for this code”
+                                </td>
+                                <td data-label="Session Affected">All pages</td>
+                                <td data-label="Date">9 Oct 2025</td>
+                            </tr>
+
+                            <tr>
+                                <td data-label="Tool">ChatGPT</td>
+                                <td data-label="Use or Purpose">
+                                    Copywriting ideation
+                                </td>
+                                <td data-label="Prompt">
+                                    “Give me some ideas for hero text for my
+                                    website about…”
+                                </td>
+                                <td data-label="Session Affected">Home page</td>
+                                <td data-label="Date">9 Oct 2025</td>
+                            </tr>
+
+                            <tr>
+                                <td data-label="Tool">ChatGPT</td>
+                                <td data-label="Use or Purpose">
+                                    Concept understanding
+                                </td>
+                                <td data-label="Prompt">
+                                    “What is mean by visceral, behavioural, and
+                                    reflective”
+                                </td>
+                                <td data-label="Session Affected">All pages</td>
+                                <td data-label="Date">10 Oct 2025</td>
+                            </tr>
+
+                            <tr>
+                                <td data-label="Tool">ChatGPT</td>
+                                <td data-label="Use or Purpose">
+                                    Drafting and ideating
+                                </td>
+                                <td data-label="Prompt">
+                                    “Ideate how can I improve”
+                                </td>
+                                <td data-label="Session Affected">All pages</td>
+                                <td data-label="Date">10 Oct 2025</td>
+                            </tr>
+
+                            <tr>
+                                <td data-label="Tool">ChatGPT</td>
+                                <td data-label="Use or Purpose">
+                                    Understanding code and documentation
+                                </td>
+                                <td data-label="Prompt">
+                                    “Breakdown this code”
+                                </td>
+                                <td data-label="Session Affected">All pages</td>
+                                <td data-label="Date">10 Oct 2025</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Week 11 -->
+            <section class="about">
+                <div class="horizontal-container">
+                    <h2 class="m-y-3">📅 Week 11 - Reflection</h2>
+                    <div class="fullpage-card">
+                        <div class="card-body">
+                            <p>
+                                In week 11, during this sprint, I started to
+                                pick which components and styling to refine in
+                                the implementation. I refined button styles,
+                                hover states, and card shadows to create clearer
+                                visual hierarchy and improved accessibility
+                                contrast ratios. I used GenAI to give me
+                                feedback regarding the implementation and to
+                                debug my code. Then, I also encountered problems
+                                when implementing the dynamic content, as some
+                                code didn’t work in the postformdata.js and
+                                page.js. To overcome those problems, I use GenAI
+                                to debug my code, finding what’s wrong in my
+                                code, fixing the indentation, and breaking down
+                                the code to help me understand why the code
+                                didn’t work in the first place, and the API
+                                cannot be called.
+                            </p>
+                            <p>
+                                In this sprint, I worked on filling the pages
+                                with content, refining the styling and
+                                components, and implementing dynamic
+                                functionality on some pages. I also use GenAI to
+                                generate some images, to represent the content
+                                and values I want to convey along with the text.
+                            </p>
+                        </div>
+                    </div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tool</th>
+                                <th>Use or Purpose</th>
+                                <th>Prompt</th>
+                                <th>Session Affected</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td data-label="Tool">ChatGPT</td>
+                                <td data-label="Use or Purpose">Feedback</td>
+                                <td data-label="Prompt">
+                                    “Is this code suitable and best practice?”
+                                </td>
+                                <td data-label="Session Affected">All pages</td>
+                                <td data-label="Date">14 Oct 2025</td>
+                            </tr>
+
+                            <tr>
+                                <td data-label="Tool">ChatGPT</td>
+                                <td data-label="Use or Purpose">Debug code</td>
+                                <td data-label="Prompt">
+                                    “What’s wrong with my js code”
+                                </td>
+                                <td data-label="Session Affected">All Pages</td>
+                                <td data-label="Date">15 Oct 2025</td>
+                            </tr>
+
+                            <tr>
+                                <td data-label="Tool">ChatGPT</td>
+                                <td data-label="Use or Purpose">
+                                    Code cleaning
+                                </td>
+                                <td data-label="Prompt">
+                                    “Fix the indentation for this code”
+                                </td>
+                                <td data-label="Session Affected">All pages</td>
+                                <td data-label="Date">15 Oct 2025</td>
+                            </tr>
+
+                            <tr>
+                                <td data-label="Tool">ChatGPT</td>
+                                <td data-label="Use or Purpose">
+                                    Understanding code
+                                </td>
+                                <td data-label="Prompt">
+                                    “Why the JS didn’t work, and what’s wrong”
+                                </td>
+                                <td data-label="Session Affected">All pages</td>
+                                <td data-label="Date">15 Oct 2025</td>
+                            </tr>
+
+                            <tr>
+                                <td data-label="Tool">ChatGPT</td>
+                                <td data-label="Use or Purpose">Fixing code</td>
+                                <td data-label="Prompt">
+                                    “Fix the code for the following styling”
+                                </td>
+                                <td data-label="Session Affected">All pages</td>
+                                <td data-label="Date">16 Oct 2025</td>
+                            </tr>
+
+                            <tr>
+                                <td data-label="Tool">ChatGPT</td>
+                                <td data-label="Use or Purpose">
+                                    Content writing
+                                </td>
+                                <td data-label="Prompt">
+                                    “Ideate some text for hero section”
+                                </td>
+                                <td data-label="Session Affected">Home Page</td>
+                                <td data-label="Date">16 Oct 2025</td>
+                            </tr>
+
+                            <tr>
+                                <td data-label="Tool">ChatGPT</td>
+                                <td data-label="Use or Purpose">
+                                    Content writing
+                                </td>
+                                <td data-label="Prompt">
+                                    “Ideate some text for about us”
+                                </td>
+                                <td data-label="Session Affected">
+                                    About Us Page
+                                </td>
+                                <td data-label="Date">16 Oct 2025</td>
+                            </tr>
+
+                            <tr>
+                                <td data-label="Tool">ChatGPT</td>
+                                <td data-label="Use or Purpose">
+                                    Content writing
+                                </td>
+                                <td data-label="Prompt">
+                                    “Rephrase this sentence”
+                                </td>
+                                <td data-label="Session Affected">All Page</td>
+                                <td data-label="Date">17 Oct 2025</td>
+                            </tr>
+
+                            <tr>
+                                <td data-label="Tool">Gemini</td>
+                                <td data-label="Use or Purpose">
+                                    Image Generation
+                                </td>
+                                <td data-label="Prompt">
+                                    “Generate an image about”
+                                </td>
+                                <td data-label="Session Affected">About Us Page</td>
+                                <td data-label="Date">18 Oct 2025</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Footer-->
+            <footer class="site-footer">
+                <h3>Links to my Work Phase Website</h3>
+                <a href="/work-phase-1/index.html">Work Phase 1</a>
+                <a href="/work-phase-2/index.html">Work Phase 2</a>
+                <a href="/work-phase-3/index.html">Work Phase 3</a>
+                <a href="/work-phase-4/index.html">Work Phase 4</a>
+            </footer>
+        </main>
+    </body>
+</html>
