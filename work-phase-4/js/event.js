@@ -57,6 +57,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
   fetchEvents();
 
+  // ======== DELETE EVENT ========
+  async function deleteEvent(id) {
+  if (!confirm("Are you sure you want to delete this event?")) return;
+
+  try {
+    const response = await fetch(
+      `https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/genericevent/${id}/`,
+      {
+        method: "DELETE",
+        headers: {
+          student_number: "s4984748",
+          uqcloud_zone_id: "f70865f8",
+        },
+      }
+    );
+
+    const text = await response.text();
+    console.log("🔍 Delete response status:", response.status);
+    console.log("🔍 Delete raw response:", text);
+
+    if (response.ok) {
+      alert("✅ Event deleted successfully!");
+      fetchEvents();
+    } else {
+      alert(`❌ Delete failed (${response.status}). Check console for details.`);
+    }
+  } catch (err) {
+    console.error("Error deleting event:", err);
+    alert("❌ Network error. Please try again later.");
+  }
+}
+
+// Attach delete listeners (after events are fetched)
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("delete-btn")) {
+    const id = e.target.dataset.id;
+    deleteEvent(id);
+  }
+});
+
+
   // ======== SUBMIT EVENT FORM (POST) ========
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
