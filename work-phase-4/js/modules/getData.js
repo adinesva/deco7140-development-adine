@@ -1,11 +1,6 @@
-const fetchGetData = (url, body = {}) => {
+const fetchGetData = (url, headers = {}) => {
   return fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(body),
+    method: "GET",
+    headers,
   }).then((res) => res.json());
 };
-
-export { fetchGetData };
