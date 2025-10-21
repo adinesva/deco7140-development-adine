@@ -1,12 +1,12 @@
 :root {
     --primary-color: #205781;
-    --secondary-color: #4DA8DA;
+    --secondary-color: #4da8da;
     --secondary4-color: #e0f7f6;
     --accent-color: #ff6363;
     --text-color: #333; /* Dark Grey */
     --grey-400: #888888;
     --grey-500: #999999;
-    --background-color: #FAFAFA ; /* Light Grey */
+    --background-color: #fafafa; /* Light Grey */
     --warning-color: #f4991a;
     --hover-color: #ff9a00; /* Text on Hover */
     --success-color: #24a155;
@@ -140,4 +140,8 @@ h3 {
     border-radius: 8px;
     display: block;
     margin: 0 auto;
+}
+
+html {
+    scroll-behavior: smooth;
 }
