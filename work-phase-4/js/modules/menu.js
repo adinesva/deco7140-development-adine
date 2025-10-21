@@ -1,3 +1,23 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuToggle.addEventListener("click", () => {
+    const isOpen = mobileMenu.style.display === "flex";
+    mobileMenu.style.display = isOpen ? "none" : "flex";
+    menuToggle.setAttribute("aria-expanded", !isOpen);
+  });
+
+  // Optional: Dropdown toggle
+  const dropdown = document.querySelector("#nav-mobile .dropdown");
+  if (dropdown) {
+    dropdown.addEventListener("click", (e) => {
+      e.preventDefault();
+      dropdown.classList.toggle("open");
+    });
+  }
+});
+
 export function initDropdown() {
   const dropdowns = document.querySelectorAll(".dropdown");
 
@@ -24,3 +44,4 @@ export function initDropdown() {
     }
   });
 }
+

@@ -1,3 +1,87 @@
+/* Mobile Navigation */
+/* ===== MOBILE NAVIGATION ===== */
+#nav-mobile {
+    display: none; /* hidden by default (desktop view) */
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 1000;
+}
+
+/* Header (logo + hamburger) */
+.nav-mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+}
+
+.nav-mobile-header img {
+    width: 36px;
+    height: auto;
+}
+
+/* Hamburger button */
+#menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--primary-color, #154d71);
+}
+
+/* Collapsible menu */
+.mobile-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none; /* hidden by default */
+    flex-direction: column;
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+}
+
+.mobile-menu li {
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    color: var(--text-color, #333);
+    font-weight: 500;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.mobile-menu a:hover {
+    background-color: var(--secondary-color, #33a1e0);
+    color: #ffffff;
+}
+
+/* Dropdown inside mobile */
+.dropdown .dropdown-content {
+    display: none;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    padding-left: 1rem;
+}
+
+.dropdown.open .dropdown-content {
+    display: flex;
+}
+
+/* Responsive Control */
+@media (max-width: 768px) {
+    #nav-desktop {
+        display: none;
+    }
+    #nav-mobile {
+        display: block;
+    }
+}
+
 /* Desktop Navigation Styling */
 #nav-desktop {
     position: absolute;
