@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/page_css/resources.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/component_skeletons/card.css" />
+
+        <!-- Icon Linking -->
+        <link rel="icon" href="./assets/favicon.ico" />
+        <title>Navigating Australia</title>
+
+        <!-- Google fonts linking -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Linking JS-->
+        <script type="module" src="./js/modules/menu.js"></script>
+        <script type="module" src="./js/index.js"></script>
+        <script type="module" src="./js/communities.js"></script>
+    </head>
+    <body>
+        <!-- Mobile Navigation -->
+        <nav id="nav-mobile" aria-label="Mobile Navigation">
+            <div class="nav-mobile-header">
+                <!-- Logo -->
+                <a href="index.html" class="nav-logo">
+                    <img
+                        src="./assets/na-logo.svg"
+                        alt="Navigating Australia logo"
+                    />
+                </a>
+
+                <!-- Hamburger Button -->
+                <button
+                    id="menu-toggle"
+                    aria-label="Toggle menu"
+                    aria-expanded="false"
+                >
+                    ☰
+                </button>
+            </div>
+
+            <!-- Collapsible Menu -->
+            <ul id="mobile-menu" class="mobile-menu">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="resource.html">Resources</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+
+                <!-- Dropdown for A4 Notes -->
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">A4 Notes ▾</a>
+                    <ul class="dropdown-content">
+                        <li>
+                            <a href="implementation_rationale.html"
+                                >Implementation Rationale</a
+                            >
+                        </li>
+                        <li>
+                            <a href="genai_mt_acknowledgement.html"
+                                >GenAI Acknowledgement</a
+                            >
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <img
+                        src="./assets/na-logo.svg"
+                        alt="Navigating Australia logo"
+                    />
+                </a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="resource.html" aria-current="page"
+                            >Resources</a
+                        >
+                    </li>
+                    <li><a href="event.html">Events</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li>
+                        <a href="about_us.html">About Us</a>
+                    </li>
+
+                    <!-- Dropdown -->
+                    <li class="dropdown">
+                        <a
+                            href="#"
+                            class="dropbtn"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            >A4 Notes ▾</a
+                        >
+                        <ul class="dropdown-content" aria-label="submenu">
+                            <li>
+                                <a href="implementation_rationale.html"
+                                    >Implementation Rationale</a
+                                >
+                            </li>
+                            <li>
+                                <a href="genai_mt_acknowledgement.html"
+                                    >GenAI Acknowledgement</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <section class="breadcrumb-container">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <ol>
+                        <li><a href="resource.html">Resources</a></li>
+                        <li aria-current="page">Resource Details</li>
+                    </ol>
+                </nav>
+            </section>
+
+            <!-- Resource Details Section -->
+            <section class="resource-details">
+                <div class="resource-header">
+                    <img
+                        src="./assets/housing-banner.jpg"
+                        alt="Students exploring housing options in Australia"
+                        class="resource-hero"
+                    />
+                    <div class="resource-title">
+                        <h1>Finding Your First Home in Australia</h1>
+                        <p>
+                            Navigating the Australian rental market can feel
+                            overwhelming at first, but student housing advisors
+                            and trusted online platforms make it easier to find
+                            a place that feels like home. From shared apartments
+                            near campus to homestays offering cultural
+                            immersion, there’s an option for every lifestyle and
+                            budget.
+                        </p>
+                    </div>
+                </div>
+
+                <article class="resource-article">
+                    <h2>🏡 Explore Your Options</h2>
+                    <p>
+                        As a newcomer, you’ll discover that housing in Australia
+                        comes in all shapes and sizes — from student dormitories
+                        to private rentals and family-hosted homestays. Shared
+                        apartments are popular for their affordability and
+                        social environment, while homestays offer the chance to
+                        experience local culture firsthand.
+                    </p>
+
+                    <h2>💻 Use Trusted Housing Platforms</h2>
+                    <p>
+                        Start your search early and use reliable platforms such
+                        as
+                        <strong>Flatmates.com.au</strong>,
+                        <strong>UniLodge</strong>, or your university’s housing
+                        portal. These services verify listings, provide photos,
+                        and often include reviews from other students.
+                    </p>
+
+                    <h2>📋 Understand the Rental Process</h2>
+                    <p>
+                        When renting privately, expect to complete an
+                        application, pay a security bond, and sign a lease.
+                        Always read the contract carefully and confirm who
+                        covers utilities like internet and electricity. It’s
+                        also a good idea to take photos when moving in to
+                        document the property’s condition.
+                    </p>
+
+                    <h2>💡 Practical Tips for Students</h2>
+                    <ul>
+                        <li>
+                            Inspect the property in person before paying any
+                            deposit.
+                        </li>
+                        <li>
+                            Never transfer money through unofficial channels or
+                            social media.
+                        </li>
+                        <li>
+                            Ask if furniture or Wi-Fi is included in your rent.
+                        </li>
+                        <li>
+                            Keep copies of your lease, bond receipt, and
+                            landlord contact.
+                        </li>
+                    </ul>
+
+                    <p>
+                        Settling into your first home is a big step — take your
+                        time, compare options, and seek help from your
+                        university’s housing advisors if you’re unsure. With a
+                        little patience, you’ll find a space that feels safe,
+                        comfortable, and truly yours.
+                    </p>
+                </article>
+            </section>
+
+            <!-- Footer-->
+            <footer class="site-footer">
+                <div class="footer-container">
+                    <!-- Left: Logo + Branding -->
+                    <div class="footer-logo">
+                        <img
+                            src="./assets/na-logo-white.svg"
+                            alt="Navigating Australia logo"
+                        />
+                    </div>
+
+                    <!-- Middle: Navigation Links -->
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="resource.html">Resources</a></li>
+                            <li><a href="event.html">Events</a></li>
+                            <li><a href="community.html">Community</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="about_us.html">About Us</a></li>
+                            <li>
+                                <a href="implementation_rationale.html"
+                                    >Implementation</a
+                                >
+                            </li>
+                            <li>
+                                <a href="genai_mt_acknowledgement.html"
+                                    >GenAI</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Right: Work Phase Links -->
+                    <div class="footer-extra">
+                        <h4>Work Phase Links</h4>
+                        <ul>
+                            <li><a href="/work-phase-1/index.html">WP1</a></li>
+                            <li><a href="/work-phase-2/index.html">WP2</a></li>
+                            <li><a href="/work-phase-3/index.html">WP3</a></li>
+                            <li><a href="/work-phase-4/index.html">WP4</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>
+                        © 2025 Navigating Australia | designed + developed by
+                        Adine.
+                    </p>
+                </div>
+            </footer>
+        </main>
+    </body>
+</html>
