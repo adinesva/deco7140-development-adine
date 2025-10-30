@@ -1,6 +1,6 @@
 /* ===== HERO SECTION ===== */
 .hero {
-    background-color: #e6f0f8;
+    background: linear-gradient(180deg, #c7dff0 0%, #f3f7fc 100%);
     padding: 4rem 2rem;
     border-radius: 1rem;
 }
