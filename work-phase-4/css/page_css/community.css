@@ -146,27 +146,27 @@
     }
 }
 
-/* All Events */
-.allevents {
+/* All Community */
+.allcommunity {
     padding: 4rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.allevents-container {
+.allcommunity-container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.allevents-header {
+.allcommunity-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
 }
 
-.allevents-header h1 {
+.allcommunity-header h1 {
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--text-color, #333);
