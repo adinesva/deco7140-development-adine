@@ -89,10 +89,14 @@
                 </a>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="resource.html">Resources</a></li>
+                    <li>
+                        <a href="resource.html" aria-current="page"
+                            >Resources</a
+                        >
+                    </li>
                     <li><a href="event.html">Events</a></li>
                     <li><a href="community.html">Community</a></li>
-                    <li><a href="news.html" aria-current="page">News</a></li>
+                    <li><a href="news.html">News</a></li>
                     <li>
                         <a href="about_us.html">About Us</a>
                     </li>
@@ -124,80 +128,82 @@
         </nav>
 
         <main>
-            <!-- Hero Section -->
-            <section class="about-section-hero">
-                <div class="about-container-hero">
-                    <!-- Left side -->
-                    <div class="about-content-hero">
-                        <h1>News</h1>
-                    </div>
-                </div>
+            <section class="breadcrumb-container">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <ol>
+                        <li><a href="news.html">News</a></li>
+                        <li aria-current="page">News Details</li>
+                    </ol>
+                </nav>
             </section>
-            <br />
 
-            <!-- News Articles -->
-            <section class="news-section">
+            <!-- News Details Section -->
+            <section class="news-details">
                 <div class="news-header">
-                    <h2>Latest Articles</h2>
+                    <img
+                        src="./assets/newsdetails-1.jpg"
+                        alt="International students attending an Australian cultural event"
+                        class="news-hero"
+                    />
+                </div>
+                <div class="news-title">
+                    <h1>UQ Welcomes New International Students</h1>
                     <p>
-                        Stay updated with stories, tips, and student life in
-                        Australia.
+                        Orientation Week at The University of Queensland kicked
+                        off with cultural showcases, welcome talks, and
+                        networking sessions designed to help new international
+                        students settle in, build connections, and feel right at
+                        home in Australia.
                     </p>
                 </div>
 
-                <div class="news-grid">
-                    <!-- Article 1 -->
-                    <article class="news-card">
-                        <img
-                            src="./assets/news-card-1.png"
-                            alt="Student event in Brisbane"
-                        />
-                        <div class="news-content">
-                            <h3>UQ Welcomes New International Students</h3>
-                            <p>
-                                Orientation week kicks off with cultural
-                                showcases, welcome talks, and networking
-                                sessions designed to help newcomers feel right
-                                at home.
-                            </p>
-                            <a href="news_details_1.html" class="read-more">Read More →</a>
-                        </div>
-                    </article>
+                <article class="news-article">
+                    <h2>🎓 A Warm Start to University Life</h2>
+                    <p>
+                        Hundreds of students from across the globe gathered at
+                        UQ’s Great Court to mark the beginning of their academic
+                        journey. The week opened with an official welcome
+                        address by the Vice-Chancellor, encouraging students to
+                        embrace curiosity, collaboration, and the vibrant
+                        community that defines UQ.
+                    </p>
 
-                    <!-- Article 2 -->
-                    <article class="news-card">
-                        <img
-                            src="./assets/news-card-2.webp"
-                            alt="Housing market update"
-                        />
-                        <div class="news-content">
-                            <h3>Finding Affordable Housing in Brisbane</h3>
-                            <p>
-                                Here's how students are navigating rental prices
-                                and finding shared accommodation options across
-                                the city.
-                            </p>
-                            <a href="news_details_2.html" class="read-more">Read More →</a>
-                        </div>
-                    </article>
+                    <h2>🌍 Cultural Showcases and Performances</h2>
+                    <p>
+                        From traditional dances and music to international food
+                        stalls, the cultural showcase highlighted the rich
+                        diversity of UQ’s student body. Performances from the
+                        Chinese Students Association, Indonesian Society, and
+                        Pacific Islands Club drew enthusiastic applause and
+                        sparked cultural conversations.
+                    </p>
 
-                    <!-- Article 3 -->
-                    <article class="news-card">
-                        <img
-                            src="./assets/news-card-3.jpg"
-                            alt="Festival in Melbourne"
-                        />
-                        <div class="news-content">
-                            <h3>Melbourne Multicultural Festival Returns</h3>
-                            <p>
-                                Food, music, and performances from around the
-                                world celebrate Australia's rich cultural
-                                diversity.
-                            </p>
-                            <a href="news_details_3.html" class="read-more">Read More →</a>
-                        </div>
-                    </article>
-                </div>
+                    <h2>🤝 Building Connections Through Networking</h2>
+                    <p>
+                        Student clubs and community groups hosted networking
+                        sessions to help newcomers connect with mentors, find
+                        like-minded peers, and discover campus opportunities.
+                        Many students joined cultural and academic societies,
+                        paving the way for lifelong friendships.
+                    </p>
+
+                    <h2>💡 Support for a Smooth Transition</h2>
+                    <p>
+                        UQ’s Student Services team offered workshops covering
+                        topics such as housing, banking, and well-being.
+                        Advisors were available throughout the week to provide
+                        guidance on academic expectations and adjusting to life
+                        in Brisbane.
+                    </p>
+
+                    <p>
+                        Orientation Week concluded with a sunset picnic along
+                        the river, where new and returning students shared
+                        stories, laughter, and a sense of excitement for the
+                        semester ahead — a true reflection of UQ’s welcoming and
+                        inclusive spirit.
+                    </p>
+                </article>
             </section>
 
             <!-- Footer-->

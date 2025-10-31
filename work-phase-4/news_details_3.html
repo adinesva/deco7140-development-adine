@@ -89,10 +89,14 @@
                 </a>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="resource.html">Resources</a></li>
+                    <li>
+                        <a href="resource.html" aria-current="page"
+                            >Resources</a
+                        >
+                    </li>
                     <li><a href="event.html">Events</a></li>
                     <li><a href="community.html">Community</a></li>
-                    <li><a href="news.html" aria-current="page">News</a></li>
+                    <li><a href="news.html">News</a></li>
                     <li>
                         <a href="about_us.html">About Us</a>
                     </li>
@@ -124,80 +128,86 @@
         </nav>
 
         <main>
-            <!-- Hero Section -->
-            <section class="about-section-hero">
-                <div class="about-container-hero">
-                    <!-- Left side -->
-                    <div class="about-content-hero">
-                        <h1>News</h1>
-                    </div>
-                </div>
+            <section class="breadcrumb-container">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <ol>
+                        <li><a href="news.html">News</a></li>
+                        <li aria-current="page">News Details</li>
+                    </ol>
+                </nav>
             </section>
-            <br />
 
-            <!-- News Articles -->
-            <section class="news-section">
+            <!-- News Details Section -->
+            <section class="news-details">
                 <div class="news-header">
-                    <h2>Latest Articles</h2>
+                    <img
+                        src="./assets/newsdetails-3.jpg"
+                        alt="Crowd enjoying performances at the Melbourne Multicultural Festival"
+                        class="news-hero"
+                    />
+                </div>
+
+                <div class="news-title">
+                    <h1>Melbourne Multicultural Festival Returns</h1>
                     <p>
-                        Stay updated with stories, tips, and student life in
-                        Australia.
+                        Food, music, and performances from around the world
+                        celebrate Australia's rich cultural diversity as the
+                        Melbourne Multicultural Festival makes its vibrant
+                        return to Federation Square this year.
                     </p>
                 </div>
 
-                <div class="news-grid">
-                    <!-- Article 1 -->
-                    <article class="news-card">
-                        <img
-                            src="./assets/news-card-1.png"
-                            alt="Student event in Brisbane"
-                        />
-                        <div class="news-content">
-                            <h3>UQ Welcomes New International Students</h3>
-                            <p>
-                                Orientation week kicks off with cultural
-                                showcases, welcome talks, and networking
-                                sessions designed to help newcomers feel right
-                                at home.
-                            </p>
-                            <a href="news_details_1.html" class="read-more">Read More →</a>
-                        </div>
-                    </article>
+                <article class="news-article">
+                    <h2>🎶 A Weekend of Global Celebration</h2>
+                    <p>
+                        After a two-year break, the Melbourne Multicultural
+                        Festival returned with a record crowd of locals and
+                        visitors enjoying a weekend filled with international
+                        rhythms, cultural showcases, and community spirit. The
+                        event featured more than 50 performances representing
+                        over 30 cultural groups.
+                    </p>
 
-                    <!-- Article 2 -->
-                    <article class="news-card">
-                        <img
-                            src="./assets/news-card-2.webp"
-                            alt="Housing market update"
-                        />
-                        <div class="news-content">
-                            <h3>Finding Affordable Housing in Brisbane</h3>
-                            <p>
-                                Here's how students are navigating rental prices
-                                and finding shared accommodation options across
-                                the city.
-                            </p>
-                            <a href="news_details_2.html" class="read-more">Read More →</a>
-                        </div>
-                    </article>
+                    <h2>🍜 Flavours from Every Corner</h2>
+                    <p>
+                        Festivalgoers indulged in cuisines from every continent
+                        — from Malaysian satay and Turkish kebabs to Peruvian
+                        ceviche and Italian cannoli. The food market stretched
+                        along the Yarra River, creating a lively aroma of
+                        spices, sweets, and sizzling grills that represented
+                        Melbourne’s global identity.
+                    </p>
 
-                    <!-- Article 3 -->
-                    <article class="news-card">
-                        <img
-                            src="./assets/news-card-3.jpg"
-                            alt="Festival in Melbourne"
-                        />
-                        <div class="news-content">
-                            <h3>Melbourne Multicultural Festival Returns</h3>
-                            <p>
-                                Food, music, and performances from around the
-                                world celebrate Australia's rich cultural
-                                diversity.
-                            </p>
-                            <a href="news_details_3.html" class="read-more">Read More →</a>
-                        </div>
-                    </article>
-                </div>
+                    <h2>💃 Performances That Unite</h2>
+                    <p>
+                        Cultural troupes lit up the main stage with energetic
+                        dances and traditional music. Highlights included
+                        Polynesian fire shows, Bollywood dance groups, and
+                        African drum ensembles. Many performers shared stories
+                        of migration and belonging, emphasising the festival’s
+                        message of unity through diversity.
+                    </p>
+
+                    <h2>🧡 Community Connections</h2>
+                    <p>
+                        Organisers collaborated with local councils,
+                        universities, and migrant organisations to promote
+                        inclusivity and mutual respect. Information booths
+                        offered resources for international students, newcomers,
+                        and community volunteers seeking cultural engagement
+                        opportunities.
+                    </p>
+
+                    <p>
+                        As the night ended with a dazzling fireworks display
+                        over the river, festival director Maria Gomez reflected,
+                        “This event reminds us that Australia’s strength lies in
+                        its people — different in origin, united in spirit.” The
+                        Melbourne Multicultural Festival once again proved that
+                        diversity is something to be celebrated, shared, and
+                        proudly embraced.
+                    </p>
+                </article>
             </section>
 
             <!-- Footer-->
