@@ -265,47 +265,56 @@
 
                 <!-- Dynamic Grid -->
                 <div id="community-list" class="communities-grid">
-                    <!-- JS will inject cards here -->
+                    <!-- JS inject cards -->
                 </div>
 
                 <!-- Community Forms -->
                 <div class="community-form">
                     <h2>Join the Community</h2>
+                    <br>
 
                     <form id="community-form" enctype="multipart/form-data">
-                        <label for="name">Full Name*</label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            required
-                            placeholder="e.g. Ava Smith"
-                        />
+                        <fieldset>
+                            <legend>Enter Your Details</legend>
 
-                        <label for="email">Email*</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            required
-                            placeholder="e.g. ava@example.com"
-                        />
+                            <label for="name">Full Name*</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                required
+                                placeholder="e.g. Ava Smith"
+                            />
 
-                        <label for="message">Message (optional)</label>
-                        <textarea
-                            id="message"
-                            name="message"
-                            rows="3"
-                            placeholder="Say hello or share about yourself..."
-                        ></textarea>
+                            <label for="email">Email*</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                                placeholder="e.g. ava@example.com"
+                            />
+                        </fieldset>
 
-                        <label for="photo">Photo (optional)</label>
-                        <input
-                            type="file"
-                            id="photo"
-                            name="photo"
-                            accept="image/*"
-                        />
+                        <fieldset>
+                            <legend>Optional Info</legend>
+
+                            <label for="message">Message (optional)</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="3"
+                                placeholder="Say hello or share about yourself..."
+                            ></textarea>
+
+                            <label for="photo">Photo (optional)</label>
+                            <input
+                                type="file"
+                                id="photo"
+                                name="photo"
+                                accept="image/*"
+                            />
+                        </fieldset>
 
                         <p id="form-feedback" class="form-feedback"></p>
 
