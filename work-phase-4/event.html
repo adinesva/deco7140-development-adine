@@ -138,6 +138,22 @@
             <section class="allevents">
                 <div class="allevents-header">
                     <h1>All Events</h1>
+                    <div class="event-filter">
+                        <input
+                            type="text"
+                            placeholder="Search events..."
+                            id="search-events"
+                        />
+                        <select id="filter-category">
+                            <option value="">All Categories</option>
+                            <option value="workshop">Workshop</option>
+                            <option value="seminar">Seminar</option>
+                            <option value="festival">Festival</option>
+                            <option value="hackathon">Hackathon</option>
+                            <option value="meetup">Meetup</option>
+                            <option value="others">Others</option>
+                        </select>
+                    </div>
                 </div>
                 <div id="event-list"></div>
             </section>
